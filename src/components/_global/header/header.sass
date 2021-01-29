@@ -1,0 +1,132 @@
+header
+	position: fixed
+	width: 100%
+	top: 0
+	left: 0
+	z-index: 999
+	background-color: $white
+	.navbar
+		width: 100%
+		position: relative
+		padding: 9.5/16*1rem 0
+		.navbar-brand
+			max-width: 272px
+		.navbar-main
+			width: 100%
+			.navbar-nav
+				width: 100%
+				.nav-item
+					margin-left: auto
+					text-align: right
+					.nav-link
+						padding: 1rem 0
+					&.active
+						.nav-link
+							color: $main
+			.navbar-top
+				.wrapper-list
+					padding-right: 18px
+					border-right: solid 1px #e1e1e1
+					ul
+						li
+							margin-left: 30px
+				.wrapper-language
+					padding-left: 18px
+					.dropdown
+						.language
+							.nav-item
+								position: relative
+							.material-icons
+								padding-left: 10px
+								font-size: 12px
+								color: $gray
+						.dropdown-menu
+							padding: 7px
+							li
+								text-align: center
+				.wrapper-search
+					margin-left: 15px
+					.search-icon
+						width: 30px
+						height: 30px
+						border-radius: 50%
+						color: $white
+						display: flex
+						align-items: center
+						justify-content: center
+						background-color: $main
+						@media screen and ( min-width: 768px )
+							display: none
+					.form-group
+						position: relative
+						input
+							width: 180px
+							height: 30px
+							padding-left: 15px
+							border-radius: 15px
+							border: none
+							background-color: #f5f5f5
+							&[placeholder]
+								color: #999999
+								font-style: italic
+								font-weight: 500
+								font-size: 12/16*1rem
+						button
+							position: absolute
+							top: 0
+							right: 0
+							width: 30px
+							height: 30px
+							border-radius: 50%
+							border: none
+							display: flex
+							align-items: center
+							justify-content: center
+							color: $white
+							font-size: 22px
+							background-color: $main
+		@media screen and ( max-width: 991.98px )
+			.navbar-main
+				.navbar-nav
+					display: none
+		@media screen and ( max-width: 767.98px )
+			.navbar-main
+				.navbar-top
+					.wrapper-search
+						.form-group
+							position: absolute
+							display: none
+					.wrapper-list
+						padding-right: 10px
+						ul
+							li
+								margin-left: 10px
+					.wrapper-language
+						padding-left: 10px
+		@media screen and ( max-width: 575.98px )
+			.navbar-main
+				.navbar-top
+	&.active
+		opacity: 1
+		visibility: visible
+		pointer-events: visible
+		ul
+			transition: all .5s cubic-bezier(.22, .44, 0, 1)
+			opacity: 1
+			visibility: visible
+			overflow: visible
+			.nav-item
+				opacity: 1
+				transform: translateY(0)
+				&:nth-child(1)
+					transition-delay: .1s
+				&:nth-child(2)
+					transition-delay: .2s
+				&:nth-child(3)
+					transition-delay: .3s
+				&:nth-child(4)
+					transition-delay: .4s
+				&:nth-child(5)
+					transition-delay: .5s
+				&:nth-child(6)
+					transition-delay: .6s
