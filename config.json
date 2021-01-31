@@ -1,6 +1,6 @@
 {
 	"font": [
-		"src/fonts/**"
+		"src/webfonts/**"
 	],
 	"js": [
 		"bower_components/jquery/dist/jquery.min.js",
@@ -11,7 +11,7 @@
 		"bower_components/fancybox/dist/jquery.fancybox.min.js"
 	],
 	"css": [
-		"src/_plugins/font.css",
+		"src/_plugins/**.css",
 		"src/_plugins/swiper/swiper-bundle.min.css",
 		"bower_components/fancybox/dist/jquery.fancybox.min.css"
 	]

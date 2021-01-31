@@ -14,9 +14,8 @@ export const copyImage = () => {
 export const copyFonts = () => {
 	let glob = JSON.parse(readFileSync("config.json"));
 	return src(glob.font, {
-			allowEmpty: true
-		})
-		.pipe(dest("dist/fonts"));
+		allowEmpty: true,
+	}).pipe(dest("dist/webfonts"));
 }
 
 export const copyFavicon = () => {
