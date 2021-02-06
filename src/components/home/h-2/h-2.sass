@@ -1,1 +1,34 @@
 .home-field
+	.wrapper-slide
+		position: relative
+		.field-item
+			.img
+				margin-bottom: 30px
+				box-shadow: 0px 0px 20px 0px rgba($color: $black, $alpha: .18)
+				background-color: #d8c6b0
+				a
+					+img-ratio(550/370)
+			.content
+				.title
+					padding-bottom: 20px
+					a
+						transition: all ease-in-out .5s
+			&:hover
+				.content
+					.title
+						a
+							color: $main
+		@media screen and ( max-width: 1440.98px )
+			.field-item
+				.img
+					a
+						+img-ratio(370/370)
+		@media screen and ( max-width: 991.98px )
+			.field-item
+				margin-bottom: 20px
+				.img
+					margin-bottom: 10px
+				.content
+					.title
+						font-size: 1rem
+						padding-bottom: 0

@@ -1,0 +1,190 @@
+.develop-section-1
+	.wrapper-content
+		flex-wrap: wrap
+		flex-direction: row
+		.content
+			padding-right: 75px
+			.title
+				padding-bottom: 15px
+			.desc
+				p
+					padding-bottom: 15px
+					line-height: 26px
+		.item
+			cursor: pointer
+			display: flex
+			flex-direction: column
+			align-items: center
+			margin: 7.5px
+			transition: all ease-in-out .3s
+			&:nth-child(1)
+				padding-left: 30px
+				width: 289px
+				.img
+					width: 100%
+					+img-ratio(289/289)
+			&:nth-child(2)
+				width: 232px
+				height: 232px
+				margin-top: auto
+				.img
+					width: 100%
+					+img-ratio(232/232)
+			&:nth-child(3)
+				width: 213px
+				height: 213px
+				margin-bottom: auto
+				.img
+					width: 100%
+					+img-ratio(213/213)
+			&:nth-child(4)
+				width: 264px
+				height: 264px
+				.img
+					width: 100%
+					+img-ratio(264/264)
+		@media screen and ( max-width: 1279.98px )
+			.item
+				&:nth-child(1)
+					width: 50%
+					padding-left: 0
+				&:nth-child(2)
+					width: 44%
+		@media screen and ( max-width: 1199.98px )
+			.content
+				padding-right: 0
+				.title
+					font-size: 18/16*1rem
+					padding-bottom: 7px
+			.item
+				&:nth-child(1),
+				&:nth-child(4),
+				&:nth-child(2),
+				&:nth-child(3)
+					width: 44%
+					height: auto
+		@media screen and ( max-width: 991.98px )
+			margin-bottom: 30px
+			.item
+				&:nth-child(1),
+				&:nth-child(4),
+				&:nth-child(2),
+				&:nth-child(3)
+					margin: 0
+					width: 50%
+					height: auto
+					.img
+						+img-ratio(369/369)
+		@media screen and ( max-width: 767.98px )
+			.item
+				&:nth-child(1),
+				&:nth-child(4),
+				&:nth-child(2),
+				&:nth-child(3)
+					width: 50%
+					margin: 0
+	@media screen and ( max-width: 991.98px )
+		.col-lg-6
+			&:nth-child(1)
+				order: 2
+.develop-section-2
+	.container--tabs
+		.nav-tabs
+			max-width: 1080px
+			margin: auto
+			margin-bottom: 20px
+			li
+				padding: 0
+				background: $white
+				display: flex
+				align-items: center
+				justify-content: center
+				border-radius: 5px
+				box-shadow: 0px 0px 20px 0 rgba($color: $black, $alpha: .18)
+				a
+					width: 100%
+					padding: 9.5px 16px
+				+ li
+					margin-left: auto
+					&::before
+						content: ''
+				&.active
+					background: $main
+					> a
+						color: $white
+						&::after
+							display: none
+		.tab-content
+			.wrap-content
+				padding: 40px 30px
+				background: $white
+				.content
+					.title
+						padding-bottom: 20px
+					.desc
+						p
+							padding-bottom: 20px
+							line-height: 26px
+				.img
+					+img-ratio(401/558)
+				.full-content
+					padding-top: 35px
+					p
+						padding-bottom: 10px
+					ul
+						list-style-type: disc
+						padding-left: 20px
+						li
+							color: #c7c7c7
+							p
+								color: $text
+								padding-bottom: 0
+								line-height: 26px
+	@media screen and ( max-width: 1199.98px )
+		.container--tabs
+			.nav-tabs
+				li
+					a
+						padding: 9.5px 10px
+	@media screen and ( max-width: 991.98px )
+		overflow: hidden
+		position: relative
+		.container--tabs
+			.nav-tabs
+				flex-direction: column
+				max-width: fit-content
+				background: $main
+				position: absolute
+				top: 0
+				right: -100%
+				z-index: 2
+				opacity: 0
+				visibility: hidden
+				overflow: hidden
+				transition: all ease-in-out .5s
+				li
+					background: none
+					box-shadow: unset
+					border-radius: 0
+					+ li
+						margin: 0
+					a
+						position: relative
+						color: $white
+					&.active
+						background: none
+						> a
+							&::after
+								content: ''
+								position: absolute
+								top: 80%
+								left: 0
+								width: 100%
+								height: 1px
+								display: block
+								background: $white
+				&.active
+					opacity: 1
+					visibility: visible
+					overflow: visible
+					right: 0

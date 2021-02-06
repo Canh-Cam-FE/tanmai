@@ -1,1 +1,25 @@
-section#about.section(setBackground='./img/banner/b-2.jpg' data-title="dự án")
+section.section.home-project(setBackground='./img/bg/bg-2.png')
+	.container
+		.row
+			.col-lg-6.col-md-6.col-sm-6
+				.wrapper-content
+					.section-title.color-main dự án
+					.desc.f-16.color-text Với kinh nghiệm, năng lực sẵn có, khả năng sáng tạo và chuyên nghiệp của mình. Công ty cổ phần Tập Đoàn Tân Mai quyết tâm phấn đấu mở rộng thị trường và tăng khả năng cạnh tranh thông qua các dự án:
+					a.btn.btn-view-more(href="") xem tất cả
+			.col-lg-6.col-md-6.col-sm-6
+				.item-project.zoom-img
+					.big-img
+						a(href="")
+							img.lazyload(data-src="./img/home/project-1.png" alt="")
+					.content
+						.title.f-18.fw-700.color-text
+							a(href="") Nhà máy giấy Tân Mai
+			-for(i=2; i<5; i++)
+				.col-lg-4.col-md-6.col-sm-6
+					.item-project.zoom-img
+						.small-img
+							a(href="")
+								img.lazyload(data-src="./img/home/project-"+i+".png" alt="")
+						.content
+							.title.f-18.fw-700.color-text
+								a(href="") Nhà máy giấy Đồng Nai

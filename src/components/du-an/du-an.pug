@@ -1,0 +1,60 @@
+section.section.project-page
+	.container
+		#tool-item
+		.wrapper-navbar
+			ul
+				li.active
+					a(href="tin.html") Công nghiệp giấy và bột giấy
+				li
+					a(href="hinh-anh.html") Nông nghiệp công nghệ cao
+				li
+					a(href="video.html") Lâm nghiệp bền vững
+				li
+					a(href="") Năng lượng sạch
+				li 
+					a(href="") Bất động sản thông minh
+		.section-title.color-main dự án công nghiệp giấy và bột giấy
+		.wrapper-big-img
+			.row
+				.col-lg-6
+					.col-big.zoom-img
+						.img
+							a(href="du-an-chi-tiet.html")
+								img.lazyload(data-src="./img/du-an/i-1.png" alt="")
+						.content.fw-700.f-18
+							a(href="du-an-chi-tiet.html") Nhà máy giấy Tân Mai - Miền đông
+				.col-lg-6
+					.row
+						.col-lg-12.col-md-6
+							.col-small.zoom-img.d-flex
+								.img
+									a(href="du-an-chi-tiet.html")
+										img.lazyload(data-src="./img/du-an/i-2.png" alt="")
+								.content.fw-700.f-18
+									a(href="du-an-chi-tiet.html") Xí nghiệp nguyên liệu giấy Lâm Đồng
+						.col-lg-12.col-md-6
+							.col-small.zoom-img.d-flex
+								.img
+									a(href="du-an-chi-tiet.html")
+										img.lazyload(data-src="./img/du-an/i-3.png" alt="")
+								.content.fw-700.f-18
+									a(href="du-an-chi-tiet.html") Xí nghiệp nguyên liệu giấy Lâm Đồng
+		.wrapper-small-img
+			.row
+				-for(i=4; i<7; i++)
+					.col-lg-4.col-md-6
+						.small-img.zoom-img
+							.img
+								a(href="du-an-chi-tiet.html")
+									img.lazyload(data-src="./img/du-an/i-"+i+".png" alt="")
+							.content.fw-700.f-18
+								a(href="du-an-chi-tiet.html") Xí nghiệp nguyên liệu giấy Daklak
+			.pages
+				.modulepager
+					ul.pagination 
+						li.active
+							a(href="")  1
+						li 
+							a(href="") 2
+						li 
+							a(href="") 3

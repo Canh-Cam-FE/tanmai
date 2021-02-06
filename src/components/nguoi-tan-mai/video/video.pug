@@ -1,0 +1,35 @@
+section.section.wrapper-page
+	.container
+		.wrapper-navbar
+			ul
+				li.active
+					a(href="tin.html") Tin Tân Mai
+				li
+					a(href="hinh-anh.html") Hinh ảnh
+				li
+					a(href="video.html") Video
+		.section-title.color-main video
+		.video-slide
+			.swiper-container.gallery-top
+				.swiper-wrapper
+					-for(i=10; i<16; i++)
+						.swiper-slide
+							.slide-inner
+								.img
+									a(href="")
+										img.lazyload(data-src="./img/nguoi-tan-mai/i-"+i+".png" alt="")
+								.content.color-white
+									img(src="./img/icon/video.png" alt="")
+									.desc Chi bộ nhà máy Tân Mai - Chi bộ 45 năm giữ rừng
+			.swiper-container.gallery-thumbs
+				.swiper-wrapper
+					-for(i=10; i<16; i++)
+						.swiper-slide
+							.slide-inner
+								.img
+									a(href="")
+										img.lazyload(data-src="./img/nguoi-tan-mai/i-"+i+".png" alt="")
+								.content
+									img(src="./img/icon/video.png" alt="")
+			.swiper-button-next
+			.swiper-button-prev

@@ -75,13 +75,13 @@
 		font-weight: 500
 		background-color: $white
 		position: relative
-		box-shadow: 0px 3px 10px 0px rgba($color: $black, $alpha: 0.05)
+		box-shadow: 0px 0px 20px 0px rgba($color: $black, $alpha: .18)
 		transition: all .5s ease-in-out
 		&::after
 			position: absolute
 			content: "\EA6C"
 			top: 0
-			left: 0
+			left: -1px
 			display: flex
 			align-items: center
 			justify-content: center
@@ -115,7 +115,7 @@
 		font-weight: 500
 		background-color: $white
 		position: relative
-		box-shadow: 0px 3px 10px 0px rgba($color: $black, $alpha: 0.05)
+		box-shadow: 0px 0px 20px 0px rgba($color: $black, $alpha: .18)
 		transition: all .5s ease-in-out
 		.material-icons
 			font-size: 22px
@@ -123,3 +123,16 @@
 		&:hover
 			background: $main
 			color: $white
+.detail
+	display: flex
+	align-items: center
+	color: $main
+	position: relative
+	font-size: 14/16*1rem
+	text-transform: uppercase
+	font-weight: 600
+	.material-icons
+		padding-left: 10px
+	&:hover
+		a
+			text-decoration: underline

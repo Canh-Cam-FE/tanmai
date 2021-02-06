@@ -1,0 +1,126 @@
+.shareholder
+	.wrapper-content
+		margin-bottom: 40px
+		.col-left
+			.title
+				padding-bottom: 20px
+			.content
+				background: #f8f8f8
+				padding: 20px
+				.img
+					min-width: 330px
+					a
+						height: 100%
+						+img-ratio(280/330)
+				.list
+					padding: 0 30px
+					padding-bottom: 40px
+					display: flex
+					flex-direction: column
+					justify-content: space-between
+					ul
+						li
+							padding: 20px 0
+							display: flex
+							border-bottom: solid 1px #ececec
+							.icon
+								margin-right: 13px
+								min-width: 24px
+								height: 32px
+		.col-right
+			.title
+				padding-bottom: 20px
+			.list-item
+				background: #f8f8f8
+				.item
+					display: flex
+					align-items: center
+					padding: 11.5px 30px
+					cursor: pointer
+
+					.date
+						text-align: center
+						padding-right: 20px
+						border-right: solid 1px #e1e1e1
+						.big-text
+							font-size: 40/16*1rem
+							font-weight: 700
+							color: $main
+							display: flex
+							flex-direction: column
+							justify-content: center
+							align-items: center
+							span
+								font-weight: 600
+								font-size: 1rem
+								color: #999999
+								margin-top: -10px
+					.content
+						padding-left: 20px
+					&:hover
+						.content
+							color: $main
+					&:nth-child(2)
+						margin: 15px 0
+				ul
+					li
+						display: flex
+						padding: 7px 0
+						border-bottom: solid 1px #e1e1e1
+						em
+							width: 20px
+							color: $main
+							font-size: 26px
+						p
+							padding-left: 20px
+							font-size: 14/16*1rem
+				&.contact
+					padding-top: 25px
+					padding-left: 30px
+					padding-bottom: 30px
+					padding-right: 30px
+					.detail
+						margin-top: 40px
+	@media screen and ( max-width: 1240px )
+		.wrapper-content
+			.col-left
+				.content
+					.img
+						min-width: 292.3px
+					.list
+						padding: 0 30px 0
+						padding-right: 0
+						ul
+							li
+								padding: 15px 0
+			.col-right
+				.list-item
+					&.contact
+						padding: 12.5px 30px
+						.detail
+							margin-top: 19px
+	@media screen and ( max-width: 1199.98px )
+		.wrapper-content
+			margin-bottom: 30px
+			.col-left,
+			.col-right
+				.title
+					font-size: 18/16*1rem
+					padding-bottom: 10px
+	@media screen and ( max-width: 991.98px )
+		.wrapper-content
+			.col-left
+				margin-bottom: 30px
+			.col-left,
+			.col-right
+				.title
+					font-size: 1rem
+	@media screen and ( max-width: 575.98px )
+		.wrapper-content
+			.col-left
+				.content
+					flex-direction: column
+					.list
+						padding: 0
+						ul
+							margin-bottom: 20px

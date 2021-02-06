@@ -1,0 +1,89 @@
+#popup-event
+	position: absolute
+	top: 185px
+	left: 50%
+	transform: translateX(-50%)
+	max-width: 790px
+	height: 440px
+	border-radius: 5px
+	z-index: 1000
+	display: none
+	padding: 30px 0
+	.wrapper-content
+		padding: 0 125px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		.title
+			margin-bottom: 30px
+			position: relative
+			&::after
+				position: absolute
+				content: ''
+				width: 80px
+				height: 2px
+				background: #cccccc
+				top: 100%
+				left: 0
+		.item
+			display: flex
+			align-items: center
+			padding: 11.5px 15px
+			cursor: pointer
+			background: #f8f8f8
+			border: solid 1px #e1e1e1
+			.date
+				text-align: center
+				padding-right: 20px
+				border-right: solid 1px #e1e1e1
+				.big-text
+					font-size: 40/16*1rem
+					font-weight: 700
+					color: $main
+					display: flex
+					flex-direction: column
+					justify-content: center
+					align-items: center
+					span
+						font-weight: 600
+						font-size: 1rem
+						color: #999999
+						margin-top: -10px
+			.text
+				padding-left: 20px
+		.content
+			margin-top: 30px
+			p
+				padding-bottom: 20px
+				color: #666666
+				line-height: 26px
+			.desc
+				line-height: 24px
+
+	.fancybox-close-small
+		background-color: #0b9444
+		&::before
+			content: url('../img/icon/close.png')
+		svg
+			display: none
+	@media screen and ( max-width: 1280px )
+		height: auto
+		.wrapper-content
+			padding: 0 50px
+	@media screen and ( max-width: 991.98px )
+		padding: 15px
+		.wrapper-content
+			padding: 0
+			.title
+				font-size: 18/16*1rem
+	@media screen and ( max-width: 575.98px )
+		width: 100%
+		.wrapper-content
+			.item
+				flex-direction: column
+				padding: 15px
+				.date
+					padding: 0
+					border: none
+				.text
+					padding: 0

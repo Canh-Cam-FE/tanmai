@@ -1,0 +1,17 @@
+section.section.home-news(setBackground='./img/bg/bg-4.png')
+	.container
+		.section-title.color-main tin tức
+		.row
+			-for(i=1; i<5; i++)
+				.col-lg-6.col-md-6.col-sm-6
+					.item-news.zoom-img
+						.row
+							.col-lg-6
+								.img
+									a(href="")
+										img.lazyload(data-src="./img/home/news-"+i+".png" alt="")
+							.col-lg-6
+								.content
+									time 03.12.2020
+									a.lcl.lcl-4.f-16.fw-700(href="") Tân Mai Group đang sở hữu và quản lý 30.846,22 ha đất rừng ở Đăk Nông, Lâm Đồng Đồng Nai...
+			a.btn.btn-view-more(href="") xem tất cả

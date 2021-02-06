@@ -22,8 +22,8 @@
 		"@fortawesome/fontawesome-free": "^5.15.2",
 		"autoprefixer": "9.4.3",
 		"bower": "^1.8.12",
-		"browser-sync": "^2.26.13",
-		"caniuse-lite": "^1.0.30001179",
+		"browser-sync": "^2.26.14",
+		"caniuse-lite": "^1.0.30001183",
 		"css-declaration-sorter": "4.0.1",
 		"cssnano": "4.1.8",
 		"del": "3.0.0",
@@ -40,8 +40,10 @@
 		"gulp-terser": "1.1.7",
 		"gulp-typescript": "^5.0.1",
 		"gulp-uglify": "3.0.2",
+		"gulp-uglify-es": "^2.0.0",
 		"remixicon": "^2.5.0",
-		"swiper": "^6.4.8",
+		"svg-convert": "^1.0.0",
+		"swiper": "^6.4.10",
 		"vendors": "^1.0.4"
 	}
 }

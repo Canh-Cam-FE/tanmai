@@ -1,0 +1,60 @@
+.home-project
+	.wrapper-content
+		width: 100%
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		.desc
+			padding-right: 75px
+			margin-bottom: 40px
+			line-height: 26px
+	.item-project
+		position: relative
+		margin-bottom: 30px
+		.big-img
+			a
+				+img-ratio(400/600)
+		.small-img
+			a
+				+img-ratio(260/390)
+		.content
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 100%
+			padding-left: 30px
+			padding-top: 1rem
+			padding-bottom: 1rem
+			background-color: rgba($color: $white, $alpha: .95)
+			.title
+				a
+					transition: all ease-in-out .5s
+		&:hover
+			.content
+				.title
+					a
+						color: $main
+	.col-lg-4
+		@media screen and ( min-width: 992px )
+			.item-project
+				margin-bottom: 0
+	@media screen and ( max-width: 991.98px )
+		.wrapper-content
+			.desc
+				margin-bottom: 10px
+				padding-right: 0
+		.item-project
+			margin-bottom: 30px
+			.big-img
+				a
+					+img-ratio(265.16/370)
+	@media screen and ( max-width: 767.98px )
+		.wrapper-content
+			.btn-view-more
+				margin-bottom: 30px
+	@media screen and ( max-width: 575.98px )
+		.col-lg-4
+			&:last-child
+				.item-project
+					margin-bottom: 0

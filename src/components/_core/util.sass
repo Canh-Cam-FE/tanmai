@@ -33,3 +33,240 @@
 
 	&-4
 		-webkit-line-clamp: 4
+.swiper-button-next,
+.swiper-button-prev
+	&::after
+		font-family: Material Icons !important
+		font-size: 48/16*1rem !important
+		color: #999999 !important
+	&:focus
+		border: none
+		outline: none
+.swiper-button-next
+	right: -40px !important
+	&::after
+		content: 'navigate_next' !important
+.swiper-button-prev
+	left: -40px !important
+	&::after
+		content: 'navigate_before' !important
+@media screen and ( max-width: 991.98px )
+	.swiper-button-next,
+	.swiper-button-prev
+		top: 100% !important
+	.swiper-button-prev
+		left: 40% !important
+	.swiper-button-next
+		right: 42% !important
+.catelogry
+	padding: 18px 0
+	margin-bottom: 64px
+	border-bottom: solid 1px #e1e1e1
+	ul
+		display: flex
+		align-items: center
+		li
+			position: relative
+			padding: 0 20px
+			a
+				font-size: 14/16*1rem
+				font-weight: 500
+				line-height: 26px
+			&:first-child
+				padding-left: 0
+			&:last-child
+				padding-right: 0
+			&.active
+				a
+					color: $main
+		li+li
+			&::before
+				position: absolute
+				top: 50%
+				left: 0
+				transform: translateY(-50%)
+				content: '|'
+				font-size: 14/16*1rem
+				color: #333333
+		@media screen and ( max-width: 1280.98px )
+			li
+				padding: 0 13.3px
+		@media screen and ( max-width: 1199.98px )
+			li
+				padding: 0 8px
+	@media screen and ( max-width: 991.98px )
+		position: absolute
+		top: 0
+		left: -100%
+		opacity: 0
+		visibility: hidden
+		z-index: 9
+		border: none
+		transition: all ease-in-out .5s
+		.container
+			padding: 0
+		ul
+			display: block
+			background-color: $main
+			padding: 30px
+			padding-top: 50px
+			li
+				padding: 0
+				a
+					padding: 1rem 0
+					color: $white
+				&.active
+					a
+						position: relative
+						color: $white
+						&::after
+							content: ''
+							position: absolute
+							top: 71%
+							left: 0
+							width: 100%
+							height: 1px
+							background-color: $white
+			li + li
+				&::before
+					display: none
+		&.active
+			left: 0
+			opacity: 1
+			visibility: visible
+#tool-item
+	cursor: pointer
+	position: absolute
+	right: 0
+	top: 0
+	z-index: 10
+	background-color: $main
+	width: 50px
+	display: flex
+	align-items: center
+	justify-content: center
+	border-top-left-radius: 20px
+	border-bottom-left-radius: 20px
+	&::after
+		content: 'list'
+		color: $white
+		font-size: 24px
+		font-family: Material Icons
+	@media screen and ( min-width: 992px )
+		display: none
+#image-map-popup
+	display: none
+	max-width: 790px
+	border-radius: 5px
+	padding: 30px 92px 53px 127px
+	.title
+		position: relative
+		margin-bottom: 28px
+		&::after
+			position: absolute
+			content: ''
+			top: 100%
+			left: 0
+			width: 80px
+			height: 2px
+			background-color: #cccccc
+	.desc
+		font-size: 1rem
+		color: $text
+		line-height: 24px
+	.fancybox-close-small
+		background-color: #0b9444
+		&::before
+			content: url('../img/icon/close.png')
+		svg
+			display: none
+	@media screen and ( max-width: 575.98px )
+		padding: 30px
+.fancybox-content
+	background: #ffffff
+	img
+		padding: 15px
+.container--tabs
+	.nav-tabs
+		list-style-type: none
+		padding: 0
+		display: flex
+		list-style: none
+		align-items: center
+		> li
+			position: relative
+			display: flex
+			align-items: center
+			padding: 0 27px
+			> a
+				position: relative
+
+			&:first-child
+				padding-left: 0
+			+ li
+				&::before
+					content: "|"
+					top: 50%
+					transform: translateY(-50%)
+					left: 0
+					position: absolute
+
+			&.active
+				> a
+					color: $main
+					cursor: default
+					&::after
+						position: absolute
+						content: ''
+						width: 100%
+						height: 2px
+						background-color: $main
+						top: 100%
+						left: 0
+						z-index: 99
+		@media screen and ( max-width: 575.98px )
+			li
+				padding: 0 10px
+				&:first-child
+					padding-left: 0
+
+	.tab-content
+		margin-left: auto
+		width: 100%
+
+		> .tab-pane
+			display: none
+
+			&.active
+				display: block
+
+		> .active
+			display: block
+.wrapper-navbar
+	margin-bottom: 41px
+	ul
+		display: flex
+		li
+			min-width: 180px
+			height: 40px
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 5px
+			background: #ebebeb
+			transition: all .5s
+			+ li
+				margin-left: 10px
+			a
+				width: 100%
+				padding: .5rem 0
+				text-align: center
+				font-size: 14/16*1rem
+				color: $main
+				font-weight: 500
+				line-height: 24px
+			&.active,
+			&:hover
+				background: $main
+				a
+					color: $white
