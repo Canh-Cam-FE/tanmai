@@ -72,29 +72,32 @@
 			.col-lg-5
 				order: 1
 .field-agriculture
-	.wrapper-content
-		position: relative
-		padding-bottom: 100px
-		z-index: -1
-		.section-title
-			padding-top: 44px
+	padding: 80/16*1rem 0
+	background-repeat: no-repeat
+	.desc
+		max-width: 1080px
+		margin: 0 auto
+		margin-bottom: 40px
+		line-height: 26px
+	.img
+		max-width: 1020px
+		margin: 0 auto
+		+img-ratio(500/1230)
+	@media screen and ( max-width: 767.98px )
+		padding: 30/16*1rem 0
+	@media screen and ( max-width: 575.98px )
 		.desc
-			padding-bottom: 50px
-			max-width: 1080px
-			margin: 0 auto
-	.wrapper-img
-		margin-top: -112px
-		.img
-			margin: 0 auto
-			max-width: 1020px
-			height: 500px
-			img
-				width: 100%
-				height: 100%
-				object-fit: cover
-		@media screen and ( max-width: 991.98px )
-			.img
-				height: auto
+			max-height: 200px
+			overflow-y: auto
+			padding-right: 15px
+			text-align: left
+			&::-webkit-scrollbar
+				width: 3px
+			&::-webkit-scrollbar-track
+				background: #e1e1e1
+				width: 1px
+			&::-webkit-scrollbar-thumb
+				background: $main
 .field-energy
 	padding: 60px 0
 	background-color: #f8f8f8

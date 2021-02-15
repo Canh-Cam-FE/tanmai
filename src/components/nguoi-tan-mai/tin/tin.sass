@@ -38,7 +38,8 @@
 		.swiper-inner
 			position: relative
 			.img
-				+img-ratio(457/810)
+				a
+					+img-ratio(457/810)
 			.icon
 				position: absolute
 				left: 20px
@@ -62,6 +63,7 @@
 			&-active
 				.swiper-inner
 					&::after
+						pointer-events: none
 						background-color: transparent
 	.video-slide
 		position: relative

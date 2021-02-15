@@ -3,7 +3,7 @@ header
 	width: 100%
 	top: 0
 	left: 0
-	z-index: 999
+	z-index: 1000
 	background-color: $white
 	transition: all .3s ease-in-out
 	.navbar
@@ -25,7 +25,8 @@ header
 					align-items: center
 					.nav-link
 						padding: 0
-					&.active
+					&.active,
+					&:hover
 						.nav-link
 							color: $main
 			.navbar-top

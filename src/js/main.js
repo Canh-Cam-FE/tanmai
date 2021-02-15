@@ -254,6 +254,38 @@ const swiperInit = () => {
 			},
 		},
 	});
+	let sildeTabs = new Swiper(".silde-wrapper .swiper-container", {
+		speed: 300,
+		loop: false,
+		observer: true,
+		observeParents: true,
+		navigation: {
+			nextEl: ".silde-wrapper .swiper-button-next",
+			prevEl: ".silde-wrapper .swiper-button-prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			375: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			575: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			1280: {
+				spaceBetween: 30,
+				slidesPerView: 8,
+			},
+		},
+	});
 };
 
 // ===========================CHECK BANNER========================= //
@@ -348,16 +380,31 @@ const activeCatelog = () => {
 	}
 }
 
-/*======================== TOGGLE POPUP IMAGE MAP =============*/
-const togglePopup = () => {
-	$('.image-map-wrapper').find('map area').on('click', function () {
-		$('.corevalues').find('#image-map-popup').fancybox().trigger("click");
+/*======================SLIDE TABS=================================*/
+const slideTab = () => {
+	$(".tabs").find('.swiper-inner').on("click", function () {
+		let $panel = $(this).closest(".tab-panel");
+		$panel.find(".swiper-inner.active").removeClass("active");
+		$(this).addClass("active");
+		let panelToShow = $(this).attr("data-href");
+		$panel.find(".panel.active").fadeOut(300, showNextPanel);
+
+		function showNextPanel() {
+			$(this).removeClass("active");
+			$("#" + panelToShow).fadeIn(300, function () {
+				$(this).addClass("active").fadeIn(300);
+			});
+		}
 	});
-	$('.shareholder .wrapper-content .col-right .list-item').find('.item .content').on('click', function () {
-		$('#popup-event').fancybox().trigger("click");
-	})
 }
 
+const changePlaceholder = () => {
+	$('.subscribe .subscribefrm').find('input').attr('placeholder', 'Địa chỉ email...');
+}
+
+const phantrang = () => {
+	$('.modulepager').find('.pagination').find('li>a.NextPage, li>a.LastPage, li>a.BackPage, li>a.FirstPage').parent().hide()
+}
 
 /*==================== LOAD FUNCTION ====================*/
 $(document).ready(function () {
@@ -371,7 +418,9 @@ $(document).ready(function () {
 	homePopup();
 	checkLayoutBanner();
 	activeCatelog();
-	togglePopup();
+	slideTab();
+	changePlaceholder();
+	phantrang();
 	$(".image-map-wrapper img[usemap]").maphilight({
 		fillColor: '3b5a56',
 		fillOpacity: 0,
