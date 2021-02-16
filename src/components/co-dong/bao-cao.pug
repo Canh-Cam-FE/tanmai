@@ -1,12 +1,13 @@
 section.section.report-page 
 	.container 
-		ul.navbar
+		ul.navbar.d-flex
 			li.active.fw-500
 				a.f-14.color-main(href='') Công bố thông tin
 			li.fw-500.dropdown
 				a.f-14.color-main(href='') Báo cáo tài chính & quản trị
+				em.material-icons expand_more
 				ul.dropdown-menu 
-					li 
+					li.active
 						a(href="") Báo cáo tài chính 
 					li 
 						a(href="") Báo cáo thường niên
@@ -20,42 +21,42 @@ section.section.report-page
 				.swiper-wrapper
 					.swiper-slide
 						.swiper-inner.active(data-href="panel-1")
-							.desc 2013
+							.desc.f-24.fw-700.color-gray-2 2013
 							.dot 
 					.swiper-slide
 						.swiper-inner(data-href="panel-2")
-							.desc 2014
+							.desc.f-24.fw-700.color-gray-2 2014
 							.dot 
 					.swiper-slide
 						.swiper-inner(data-href="panel-3")
-							.desc 2015
+							.desc.f-24.fw-700.color-gray-2 2015
 							.dot 
 					.swiper-slide
 						.swiper-inner(data-href="panel-4")
-							.desc 2016
+							.desc.f-24.fw-700.color-gray-2 2016
 							.dot 
 					.swiper-slide
 						.swiper-inner(data-href="panel-5")
-							.desc 2017
+							.desc.f-24.fw-700.color-gray-2 2017
 							.dot 
 					.swiper-slide
 						.swiper-inner(data-href="panel-6")
-							.desc 2018
+							.desc.f-24.fw-700.color-gray-2 2018
 							.dot 
 					.swiper-slide
 						.swiper-inner(data-href="panel-7")
-							.desc 2019
+							.desc.f-24.fw-700.color-gray-2 2019
 							.dot 
 					.swiper-slide
 						.swiper-inner(data-href="panel-8")
-							.desc 2020
+							.desc.f-24.fw-700.color-gray-2 2020
 							.dot 
-			.swiper-button-next
-			.swiper-button-prev
+				.swiper-button-next
+				.swiper-button-prev
 			#panel-1.panel.active
 				.row
 					-for(i=1; i<10; i++)
-						.col-lg-4
+						.col-lg-4.col-md-6.col-sm-6
 							.item.d-flex
 								.img 
 									a(href="") 
@@ -70,7 +71,7 @@ section.section.report-page
 			#panel-2.panel
 				.row
 					-for(i=1; i<10; i++)
-						.col-lg-4
+						.col-lg-4.col-md-6.col-sm-6
 							.item.d-flex
 								.img 
 									a(href="") 
@@ -85,7 +86,7 @@ section.section.report-page
 			#panel-3.panel
 				.row
 					-for(i=1; i<10; i++)
-						.col-lg-4
+						.col-lg-4.col-md-6.col-sm-6
 							.item.d-flex
 								.img 
 									a(href="") 
@@ -100,7 +101,7 @@ section.section.report-page
 			#panel-4.panel
 				.row
 					-for(i=1; i<10; i++)
-						.col-lg-4
+						.col-lg-4.col-md-6.col-sm-6
 							.item.d-flex
 								.img 
 									a(href="") 
@@ -115,7 +116,7 @@ section.section.report-page
 			#panel-5.panel
 				.row
 					-for(i=1; i<10; i++)
-						.col-lg-4
+						.col-lg-4.col-md-6.col-sm-6
 							.item.d-flex
 								.img 
 									a(href="") 
@@ -130,7 +131,7 @@ section.section.report-page
 			#panel-6.panel
 				.row
 					-for(i=1; i<10; i++)
-						.col-lg-4
+						.col-lg-4.col-md-6.col-sm-6
 							.item.d-flex
 								.img 
 									a(href="") 
@@ -145,7 +146,7 @@ section.section.report-page
 			#panel-7.panel
 				.row
 					-for(i=1; i<10; i++)
-						.col-lg-4
+						.col-lg-4.col-md-6.col-sm-6
 							.item.d-flex
 								.img 
 									a(href="") 
@@ -160,7 +161,7 @@ section.section.report-page
 			#panel-8.panel
 				.row
 					-for(i=1; i<10; i++)
-						.col-lg-4
+						.col-lg-4.col-md-6.col-sm-6
 							.item.d-flex
 								.img 
 									a(href="") 
