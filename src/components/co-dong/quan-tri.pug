@@ -1,0 +1,31 @@
+section.section.report-page
+	.container 
+		ul.navbar.d-flex
+			li.active.fw-500
+				a.f-14.color-main(href='') Công bố thông tin
+			li.fw-500.dropdown
+				.caption
+					a.f-14.color-main(href='') Báo cáo tài chính & quản trị
+					em.material-icons expand_more
+				ul.dropdown-menu 
+					li.active
+						a(href="") Báo cáo tài chính 
+					li 
+						a(href="") Báo cáo thường niên
+					li
+						a(href="quan-tri-doanh-nghiep.html") Quản trị doanh nghiệp
+			li.fw-500
+				a.f-14.color-main(href='thong-tin-lien-he.html') Liên hệ
+		.section-title.color-main quản trị doanh nghiệp
+		.row 
+			-for(i=1; i<10; i++)
+				.col-lg-4.col-md-6.col-sm-6 
+					.item-col.d-flex.zoom-img
+						.img 
+							a(href="") 
+								img.lazyload(data-src="./img/quan-tri/i-"+i+".png", alt="")
+						.content 
+							time 30.06.2020
+							.title.f-14 
+								a(href="") Quy chế quản trị nội bộ Tân Mai Group
+

@@ -265,7 +265,7 @@ const swiperInit = () => {
 		},
 		breakpoints: {
 			320: {
-				slidesPerView: 2,
+				slidesPerView: 3,
 				spaceBetween: 10,
 			},
 			375: {
@@ -405,7 +405,17 @@ const changePlaceholder = () => {
 const phantrang = () => {
 	$('.modulepager').find('.pagination').find('li>a.NextPage, li>a.LastPage, li>a.BackPage, li>a.FirstPage').parent().hide()
 }
+const toggleNav = () => {
+	$('.report-page .navbar').find('.dropdown .caption em').on('click', function () {
+		$('.report-page .navbar').find('.dropdown-menu').slideToggle()
+	});
+	if ($(window).width() < 575.98) {
+		$('.recruit-list .wrapper-top .wrapper-filter .dropdown .title').find('em').on('click', function () {
+			$('.recruit-list .wrapper-top .wrapper-filter .dropdown').find('.dropdown-menu').slideToggle()
+		});
+	}
 
+}
 /*==================== LOAD FUNCTION ====================*/
 $(document).ready(function () {
 	scrollTop();
@@ -421,6 +431,7 @@ $(document).ready(function () {
 	slideTab();
 	changePlaceholder();
 	phantrang();
+	toggleNav();
 	$(".image-map-wrapper img[usemap]").maphilight({
 		fillColor: '3b5a56',
 		fillOpacity: 0,

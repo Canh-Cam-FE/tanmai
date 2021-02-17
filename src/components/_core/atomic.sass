@@ -56,15 +56,23 @@
 			padding: 0
 	a
 		transition: .2s ease-in-out all
-	&.active, &:hover
+	&.active
 		.dropdown-menu
 			top: 100%
 			pointer-events: auto
 			opacity: 1
+	@media screen and ( min-width: 576px )
+		&:hover
+			.dropdown-menu
+				top: 100%
+				pointer-events: auto
+				opacity: 1
 .text-uppercase
 	text-transform: uppercase
 .text-capitalize
 	text-transform: capitalize
+.text-lowercase
+	text-transform: lowercase
 .text-center
 	text-align: center
 .color-white

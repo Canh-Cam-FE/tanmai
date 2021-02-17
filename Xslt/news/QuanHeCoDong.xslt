@@ -89,31 +89,37 @@
                     </div>
                     <div class="content d-flex">
                         <div class="img">
-                            <a href="bao-cao-tai-chinh.html">
-                                <img class="lazyload" data-src="./img/quan-he-co-dong/i-1.png" alt=""/>
+                            <a>
+                                <xsl:attribute name="href">
+                                    <xsl:value-of disable-output-escaping="yes" select="Url"></xsl:value-of>
+                                </xsl:attribute>
+                                <xsl:attribute name="title">
+                                    <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                                </xsl:attribute>
+                                <img class="lazyload">
+                                    <xsl:attribute name="data-src">
+                                        <xsl:value-of select="ImageUrl"></xsl:value-of>
+                                    </xsl:attribute>
+                                    <xsl:attribute name="alt">
+                                        <xsl:value-of select="Title"></xsl:value-of>
+                                    </xsl:attribute>
+                                </img>
                             </a>
                         </div>
                         <div class="list">
                             <ul>
-                                <li>
-                                    <div class="icon">
-                                        <img src="./img/icon/pdf.png" alt=""/>
-                                    </div>
-                                    <div class="text">
-                                        <a href="">Chương trình đại hội đồng cổ đông thường niên năm 2020</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="icon">
-                                        <img src="./img/icon/pdf.png" alt=""/>
-                                    </div>
-                                    <div class="text">
-                                        <a href="">Chương trình đại hội đồng cổ đông thường niên năm 2020</a>
-                                    </div>
-                                </li>
+                                <xsl:apply-templates select="News" mode="BaoCaoTaiChinh"></xsl:apply-templates>
                             </ul>
                             <div class="detail">
-                                <a href="bao-cao-tai-chinh.html">xem chi tiết </a>
+                                <a>
+                                    <xsl:attribute name="href">
+                                        <xsl:value-of disable-output-escaping="yes" select="Url"></xsl:value-of>
+                                    </xsl:attribute>
+                                    <xsl:attribute name="title">
+                                        <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                                    </xsl:attribute>
+                                    <xsl:text disable-output-escaping="yes">xem chi tiết</xsl:text>
+                                </a>
                                 <em class="material-icons">arrow_forward</em>
                             </div>
                         </div>
@@ -128,34 +134,17 @@
                         <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
                     </div>
                     <div class="list-item contact">
-                        <ul>
-                            <li>
-                                <em class="material-icons">room</em>
-                                <p>
-                                    <strong>Địa chỉ: </strong>Đường số 11, Khu Công Nghiệp Biên Hòa I, Phường An Bình, TP Biên Hòa, Tỉnh Đồng Nai, Việt Nam
-                                </p>
-                            </li>
-                            <li>
-                                <em class="material-icons">call</em>
-                                <p>
-                                    <strong>Điện thoại: </strong>061.3836201
-                                </p>
-                            </li>
-                            <li>
-                                <em class="material-icons">print</em>
-                                <p>
-                                    <strong>Fax: </strong>061.3836231
-                                </p>
-                            </li>
-                            <li>
-                                <em class="material-icons">mail</em>
-                                <p>
-                                    <strong>Email: </strong>contact@tanmaigroup.com
-                                </p>
-                            </li>
-                        </ul>
+                        <xsl:value-of disable-output-escaping="yes" select="News/BriefContent"></xsl:value-of>
                         <div class="detail">
-                            <a href="thong-tin-lien-he.html">xem chi tiết </a>
+                            <a>
+                                <xsl:attribute name="href">
+                                    <xsl:value-of disable-output-escaping="yes" select="Url"></xsl:value-of>
+                                </xsl:attribute>
+                                <xsl:attribute name="title">
+                                    <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                                </xsl:attribute>
+                                <xsl:text disable-output-escaping="yes">xem chi tiết</xsl:text>
+                            </a>
                             <em class="material-icons">arrow_forward</em>
                         </div>
                     </div>
@@ -164,30 +153,32 @@
         </xsl:if>
     </xsl:template>
     <xsl:template match="News" mode="CongBo">
-        <li>
-            <div class="icon">
-                <img >
-                    <xsl:attribute name="src">
-                        <xsl:value-of select="ImageUrl"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:attribute name="alt">
-                        <xsl:value-of select="Title"></xsl:value-of>
-                    </xsl:attribute>
-                </img>
-            </div>
-            <div class="text">
-                <a>
-                    <xsl:attribute name="href">
-                        <xsl:value-of disable-output-escaping="yes" select="Url"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:attribute name="title">
+        <xsl:if test="position() &gt; 0 and position() &lt;3">
+            <li>
+                <div class="icon">
+                    <img >
+                        <xsl:attribute name="src">
+                            <xsl:value-of select="ImageUrl"></xsl:value-of>
+                        </xsl:attribute>
+                        <xsl:attribute name="alt">
+                            <xsl:value-of select="Title"></xsl:value-of>
+                        </xsl:attribute>
+                    </img>
+                </div>
+                <div class="text">
+                    <a>
+                        <xsl:attribute name="href">
+                            <xsl:value-of disable-output-escaping="yes" select="Url"></xsl:value-of>
+                        </xsl:attribute>
+                        <xsl:attribute name="title">
+                            <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                        </xsl:attribute>
                         <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-                    </xsl:attribute>
-                    <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-                </a>
-                <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-            </div>
-        </li>
+                    </a>
+                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+                </div>
+            </li>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="News" mode="SuKien">
         <div class="item">
@@ -228,5 +219,33 @@
                 </div>
             </div>
         </div>
+    </xsl:template>
+    <xsl:template match="News" mode="BaoCaoTaiChinh">
+        <xsl:if test="position() &gt; 0 and position() &lt; 3">
+            <li>
+                <div class="icon">
+                    <img >
+                        <xsl:attribute name="src">
+                            <xsl:value-of select="ImageUrl"></xsl:value-of>
+                        </xsl:attribute>
+                        <xsl:attribute name="alt">
+                            <xsl:value-of select="Title"></xsl:value-of>
+                        </xsl:attribute>
+                    </img>
+                </div>
+                <div class="text">
+                    <a>
+                        <xsl:attribute name="href">
+                            <xsl:value-of disable-output-escaping="yes" select="Url"></xsl:value-of>
+                        </xsl:attribute>
+                        <xsl:attribute name="title">
+                            <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                        </xsl:attribute>
+                        <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                    </a>
+                    <xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+                </div>
+            </li>
+        </xsl:if>
     </xsl:template>
 </xsl:stylesheet>
