@@ -4,23 +4,6 @@
     <xsl:template match="/ZoneList">
         <ul class="navbar d-flex">
             <xsl:apply-templates select="Zone" mode="LV-1"></xsl:apply-templates>
-            <!-- <li class="fw-500 dropdown">
-                <div class="caption">
-                    <a class="f-14 color-main" href="">Báo cáo tài chính & quản trị</a>
-                    <em class="material-icons">expand_more</em>
-                </div>
-                <ul class="dropdown-menu">
-                    <li class="active">
-                        <a href="">Báo cáo tài chính </a>
-                    </li>
-                    <li>
-                        <a href="">Báo cáo thường niên</a>
-                    </li>
-                    <li>
-                        <a href="quan-tri-doanh-nghiep.html">Quản trị doanh nghiệp</a>
-                    </li>
-                </ul>
-            </li> -->
         </ul>
         <div class="section-title color-main">
             <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
@@ -38,20 +21,25 @@
                     <xsl:attribute name="class">
                         <xsl:text disable-output-escaping="yes">fw-500 dropdown</xsl:text>
                     </xsl:attribute>
+                    <xsl:if test="IsActive='true'">
+                        <xsl:attribute name="class">
+                            <xsl:text>fw-500 dropdown active</xsl:text>
+                        </xsl:attribute>
+                    </xsl:if>
                     <div class="caption">
-                        <a class="f-14 color-main" href="">Báo cáo tài chính  quản trị</a>
+                        <a class="f-14 color-main" href="">
+                            <xsl:attribute name="href">
+                                <xsl:text disable-output-escaping="yes">javascript: ;</xsl:text>
+                            </xsl:attribute>
+                            <xsl:attribute name="title">
+                                <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                            </xsl:attribute>
+                            <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                        </a>
                         <em class="material-icons">expand_more</em>
                     </div>
                     <ul class="dropdown-menu">
-                        <li class="active">
-                            <a href="">Báo cáo tài chính </a>
-                        </li>
-                        <li>
-                            <a href="">Báo cáo thường niên</a>
-                        </li>
-                        <li>
-                            <a href="quan-tri-doanh-nghiep.html">Quản trị doanh nghiệp</a>
-                        </li>
+                        <xsl:apply-templates select="Zone" mode="LV-2"></xsl:apply-templates>
                     </ul>
                 </xsl:if>
                 <xsl:if test="count(Zone) = 0">
@@ -67,5 +55,23 @@
                 </xsl:if>
             </li>
         </xsl:if>
+    </xsl:template>
+    <xsl:template match="Zone" mode="LV-2">
+        <li>
+            <xsl:if test="IsActive='true'">
+                <xsl:attribute name="class">
+                    <xsl:text>active</xsl:text>
+                </xsl:attribute>
+            </xsl:if>
+            <a>
+                <xsl:attribute name="href">
+                    <xsl:value-of disable-output-escaping="yes" select="Url"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:attribute name="title">
+                    <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+            </a>
+        </li>
     </xsl:template>
 </xsl:stylesheet>

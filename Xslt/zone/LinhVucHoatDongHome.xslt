@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
     <xsl:output method="html" indent="yes"/>
-    <xsl:template match="/NewsList">
-        <div class="row">
-            <xsl:apply-templates select="News"></xsl:apply-templates>
+    <xsl:template match="/ZoneList">
+        <xsl:apply-templates select="Zone"></xsl:apply-templates>
+    </xsl:template>
+    <xsl:template match="Zone">
+        <div class="section-title color-main">
+            <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+        </div>
+        <div class="wrapper-slide">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <xsl:apply-templates select="Zone" mode="Child"></xsl:apply-templates>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </xsl:template>
-    <xsl:template match="News">
-        <div class="col-md-6 col-sm-6 col-lg-6">
-            <div class="col-item zoom-img d-flex">
+    <xsl:template match="Zone" mode="Child">
+        <div class="swiper-slide">
+            <div class="field-item zoom-img">
                 <div class="img">
                     <a>
                         <xsl:attribute name="href">
@@ -28,11 +40,8 @@
                     </a>
                 </div>
                 <div class="content">
-                    <time class="f-14">
-                        <xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of>
-                    </time>
-                    <div class="title">
-                        <a class="lcl lcl-4 fw-700">
+                    <div class="title f-18 fw-700 color-text text-uppercase">
+                        <a>
                             <xsl:attribute name="href">
                                 <xsl:value-of disable-output-escaping="yes" select="Url"></xsl:value-of>
                             </xsl:attribute>
@@ -41,6 +50,9 @@
                             </xsl:attribute>
                             <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
                         </a>
+                    </div>
+                    <div class="desc lcl lcl-2 f-14 fw-400 color-text line-20">
+                        <xsl:value-of disable-output-escaping="yes" select="Description"></xsl:value-of>
                     </div>
                 </div>
             </div>

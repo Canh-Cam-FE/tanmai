@@ -39,7 +39,10 @@
 						border-bottom: solid 1px #e1e1e1
 						a
 							font-size: 14/16*1rem
-
+	.tab-content
+		display: none
+		&.active
+			display: block
 	table
 		width: 100%
 		margin-bottom: 50px
@@ -52,6 +55,11 @@
 					text-align: center
 					text-transform: uppercase
 					color: $white
+					&:first-child
+						padding: 0 20px
+					&:nth-child(2)
+						text-align: left
+						padding-left: 100px
 		tbody
 			tr
 				transition: all .5s
@@ -65,6 +73,9 @@
 					&:first-child
 						font-weight: 500
 						font-size: 1rem
+					&:nth-child(2)
+						text-align: left
+						padding-left: 100px
 				&:hover
 					box-shadow: 0px 3px 20px 0px rgba($color: $black, $alpha: 0.186)
 					td
@@ -91,6 +102,7 @@
 					margin-right: 7px
 		@media screen and ( min-width: 1025px )
 			display: none
+
 	@media screen and ( max-width: 767.98px )
 		.wrapper-top
 			flex-direction: column
@@ -117,25 +129,7 @@
 		font-size: 30/16*1rem
 		font-weight: 600
 		padding-bottom: 0
-	.bottom-wrapper
-		margin-bottom: 30px
-		time
-			font-size: 14/16*1rem
-		.social
-			li
-				padding: 0 8px
-				border-radius: 5px
-				color: $white
-				&:first-child
-					background: #1877f2
-					margin-right: 7px
-				&:last-child
-					background: #1b95e0
-				a
-					font-size: 12px
-					span
-						font-weight: 600
-						padding-left: 5px
+
 	.full-content
 		p
 			strong
@@ -210,3 +204,6 @@
 		.wrapper-btn
 			.view
 				margin-top: 10px
+.Module-185
+	.title-page
+		display: none

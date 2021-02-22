@@ -17,47 +17,79 @@ section.section.recruit-list(setBackground='./img/bg/vitrituyendung.png')
 			.section-title.color-main vị trí tuyển dụng 
 			.wrapper-filter.d-flex.align-center 
 				.text.f-12.fw-500 Lọc theo tên Công ty/ Chi nhánh 
-				.dropdown
-					.title.f-14.d-flex.align-center
-						a(href="") Công ty cổ phần tập đoàn Tân Mai
-						em.material-icons expand_more
-					ul.dropdown-menu
-						li
-							a(href="") Công ty cổ phần tập đoàn Tân Mai
-						li
-							a(href="") Công ty cổ phần tập đoàn Tân Mai
-		table 
-			thead
-				tr 
-					th stt 
-					th vị trí tuyển dụng 
-					th số lượng
-					th ngày đăng 
-					th ngày hết hạn
-			tbody
-				-for(i=1; i<11; i++)
+				select#select-box
+					option(value="tab-1") Công ty cổ phần tập đoàn Tân Mai
+					option(value="tab-2") Công ty cổ phần tập đoàn Tân Mai 2
+		#tab-1.tab-content.active
+			h1 1
+			table 
+				thead
 					tr 
-						td 01
-						td 
-							a(href="chi-tiet-tuyen-dung.html") Nhân viên kinh doanh 
-						td 01
-						td 29.11.2020
-						td 29.11.2020
-		.list-mobile 
-			.row 
-				-for(i=1; i<11; i++)
-					.col-sm-6.col-md-6.col-lg-6
-						.item
-							a.title(href="") Nhân viên kinh doanh
-							p 
-								em.mdi.mdi-account-group
-								span Số lượng: 01
-							p
-								em.mdi.mdi-clock-start
-								span Ngày bắt đầu: 05/05/2020
-							p
-								em.mdi.mdi-clock-end
-								span Ngày hết hạn: 31/06/2020
-							.btn-apply Ứng Tuyển
-							.btn-view Xem chi tiết
+						th stt 
+						th vị trí tuyển dụng 
+						th số lượng
+						th ngày đăng 
+						th ngày hết hạn
+				tbody
+					-for(i=1; i<11; i++)
+						tr 
+							td 01
+							td 
+								a(href="chi-tiet-tuyen-dung.html") Nhân viên kinh doanh 
+							td 01
+							td 29.11.2020
+							td 29.11.2020
+			.list-mobile 
+				.row 
+					-for(i=1; i<11; i++)
+						.col-sm-6.col-md-6.col-lg-6
+							.item
+								a.title(href="") Nhân viên kinh doanh
+								p 
+									em.mdi.mdi-account-group
+									span Số lượng: 01
+								p
+									em.mdi.mdi-clock-start
+									span Ngày bắt đầu: 05/05/2020
+								p
+									em.mdi.mdi-clock-end
+									span Ngày hết hạn: 31/06/2020
+								.btn-apply Ứng Tuyển
+								.btn-view Xem chi tiết
+		#tab-2.tab-content
+			h1 2
+			table 
+				thead
+					tr 
+						th stt 
+						th vị trí tuyển dụng 
+						th số lượng
+						th ngày đăng 
+						th ngày hết hạn
+				tbody
+					-for(i=1; i<11; i++)
+						tr 
+							td 01
+							td 
+								a(href="chi-tiet-tuyen-dung.html") Nhân viên kinh doanh 
+							td 01
+							td 29.11.2020
+							td 29.11.2020
+			.list-mobile 
+					.row 
+						-for(i=1; i<11; i++)
+							.col-sm-6.col-md-6.col-lg-6
+								.item
+									a.title(href="") Nhân viên kinh doanh
+									p 
+										em.mdi.mdi-account-group
+										span Số lượng: 01
+									p
+										em.mdi.mdi-clock-start
+										span Ngày bắt đầu: 05/05/2020
+									p
+										em.mdi.mdi-clock-end
+										span Ngày hết hạn: 31/06/2020
+									.btn-apply Ứng Tuyển
+									.btn-view Xem chi tiết
 

@@ -286,6 +286,38 @@ const swiperInit = () => {
 			},
 		},
 	});
+	let newsOther = new Swiper(".slide-other-news .swiper-container", {
+		speed: 300,
+		loop: true,
+		observer: true,
+		observeParents: true,
+		navigation: {
+			nextEl: ".slide-other-news .swiper-button-next",
+			prevEl: ".slide-other-news .swiper-button-prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			375: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			575: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			1280: {
+				spaceBetween: 30,
+				slidesPerView: 2,
+			},
+		},
+	});
 };
 
 // ===========================CHECK BANNER========================= //
@@ -361,7 +393,7 @@ const activeHeaderWhenScroll = () => {
 /*====================POPUP HOME==============================*/
 const homePopup = () => {
 	$(document).ready(function () {
-		$("#popup").fancybox().trigger("click");
+		$("#popup_1").fancybox().trigger("click");
 	});
 }
 
@@ -396,15 +428,30 @@ const slideTab = () => {
 			});
 		}
 	});
-}
+	$('.recruit-list').find('#select-box').on('change', function () {
+		if ($(this).children(':selected')) {
+			let panelToShow = $('#select-box option').attr("value");
+			$('.recruit-list').find('.tab-content.active').fadeOut(300, showNextPanel);
 
+			function showNextPanel() {
+				$("#" + panelToShow).fadeIn(300, function () {
+					$('.recruit-list').find('.tab-content').addClass("active").fadeIn(300);
+				});
+			}
+		}
+	})
+
+}
+/*======================CHANGEPLACEHOLDER=================================*/
 const changePlaceholder = () => {
 	$('.subscribe .subscribefrm').find('input').attr('placeholder', 'Địa chỉ email...');
 }
-
+/*======================PHAN TRANG=================================*/
 const phantrang = () => {
 	$('.modulepager').find('.pagination').find('li>a.NextPage, li>a.LastPage, li>a.BackPage, li>a.FirstPage').parent().hide()
 }
+
+/*======================TOGGLE NAV=================================*/
 const toggleNav = () => {
 	$('.report-page .navbar').find('.dropdown .caption em').on('click', function () {
 		$('.report-page .navbar').find('.dropdown-menu').slideToggle()
@@ -416,6 +463,44 @@ const toggleNav = () => {
 	}
 
 }
+
+/*==================== SCROLL SECTION ===================*/
+const crollToDiv = () => {
+	$('#catelogry ul li a').on('click', function (event) {
+		$(this).parent('li').addClass('active');
+		if (this.hash !== "") {
+			event.preventDefault();
+			var hash = this.hash;
+			$('html, body').animate({
+				scrollTop: $(hash).offset().top
+			}, 500, function () {
+				window.location.hash = hash;
+			});
+		}
+		$('#categroly ul li a').not(this).parent('li').removeClass('active');
+		window.addEventListener("scroll", function () {
+			var bannerheight = $('#pagebanner').outerHeight();
+			if (window.pageYOffset > bannerheight) {
+				$("#catelogry").addClass("scolled");
+			} else {
+				$("#catelogry").removeClass("scolled");
+			}
+		})
+	});
+	if ($('#catelogry').length >= 1) {
+		window.addEventListener("scroll", function () {
+			var bannerheight = $('#pagebanner').outerHeight();
+			var heightHeader = $('header').outerHeight();
+			if (window.pageYOffset > bannerheight) {
+				$("#catelogry").addClass("scolled");
+				$('.scolled').css('top', heightHeader)
+			} else {
+				$("#catelogry").removeClass("scolled");
+			}
+		})
+	}
+}
+
 /*==================== LOAD FUNCTION ====================*/
 $(document).ready(function () {
 	scrollTop();
@@ -425,13 +510,14 @@ $(document).ready(function () {
 	scrollDown();
 	setBackgroundElement();
 	activeHeaderWhenScroll();
-	homePopup();
+	// homePopup();
 	checkLayoutBanner();
 	activeCatelog();
 	slideTab();
 	changePlaceholder();
 	phantrang();
 	toggleNav();
+	// crollToDiv();
 	$(".image-map-wrapper img[usemap]").maphilight({
 		fillColor: '3b5a56',
 		fillOpacity: 0,
