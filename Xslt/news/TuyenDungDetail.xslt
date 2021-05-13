@@ -87,7 +87,7 @@
             <time>
                 <xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of>
             </time>
-            <div class="title">
+            <div class="title fw-600">
                 <a>
                     <xsl:attribute name="href">
                         <xsl:value-of disable-output-escaping="yes" select="Url"></xsl:value-of>

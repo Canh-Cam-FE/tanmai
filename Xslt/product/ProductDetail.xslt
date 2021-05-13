@@ -37,9 +37,9 @@
                 </div>
             </div>
         </section>
-        <section class="section project-other" setBackground="./img/bg/prodetail-1.png">
+        <section class="section project-other" setBackground="/Data/Sites/1/skins/default/img/bg/prodetail-1.png">
             <div class="container">
-                <div class="section-title color-main">dự án khác</div>
+                <div class="section-title color-main f-30 fw-600">Dự án khác</div>
                 <div class="slide-other">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
@@ -81,15 +81,15 @@
         </div>
     </xsl:template>
     <xsl:template match="ProductAttributes" mode="List">
-        <li class="fw-700 text-uppercase">
+        <li class="text-uppercase">
             <xsl:if test="position() = 1">
                 <xsl:attribute name="class">
-                    <xsl:text>active fw-700 text-uppercase</xsl:text>
+                    <xsl:text>active text-uppercase</xsl:text>
                 </xsl:attribute>
             </xsl:if>
             <xsl:if test="IsActive='true'">
                 <xsl:attribute name="class">
-                    <xsl:text>active fw-700 text-uppercase</xsl:text>
+                    <xsl:text>active text-uppercase</xsl:text>
                 </xsl:attribute>
             </xsl:if>
             <a>

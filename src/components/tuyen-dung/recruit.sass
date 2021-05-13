@@ -1,5 +1,9 @@
 .recruit-desc
 	margin-bottom: 30px
+	.section-title
+		font-weight: 600
+		font-size: 30/16*1rem
+		text-transform: unset
 	.wrapper-content
 		padding-right: 30px
 		.desc
@@ -18,72 +22,94 @@
 	.wrapper-top
 		margin-bottom: 30px
 		.section-title
+			font-weight: 600
+			font-size: 30/16*1rem
+			text-transform: unset
 			padding-bottom: 0
 		.wrapper-filter
 			.text
 				margin-right: 15px
-			.dropdown
+			#select-box
 				border-radius: 5px
-				background: $white
 				box-shadow: 0px 3px 10px 0px rgba($color: $black, $alpha: 0.05)
 				padding: 11px 22px
-				.title
-					a
-						font-weight: 500
-						color: $main
-					em
-						color: #999999
-				.dropdown-menu
-					li
-						padding: 7px 0
-						border-bottom: solid 1px #e1e1e1
-						a
-							font-size: 14/16*1rem
+				font-weight: 500
+				color: $main
+				border: none
+				option
+					color: $text
+			select
+				-webkit-appearance: none
+				-moz-appearance: none
+				appearence: none
+				background-image: url('../img/icon/down.png')
+				background-position: 97% center
+				background-repeat: no-repeat
 	.tab-content
 		display: none
+		.load-more
+			margin-top: 50px
+			display: flex
+			align-items: center
+			justify-content: center
+			color: $main
+			text-transform: uppercase
+			line-height: 24px
+			font-weight: 500
+			font-size: 14/16*1rem
+			em
+				padding-left: 7px
+				font-size: 18px
 		&.active
 			display: block
-	table
-		width: 100%
-		margin-bottom: 50px
-		box-shadow: 0px 3px 20px 0px rgba($color: $black, $alpha: 0.186)
-		thead
-			tr
-				background: $main-3
-				th
-					padding: 12px 0
-					text-align: center
-					text-transform: uppercase
-					color: $white
-					&:first-child
-						padding: 0 20px
-					&:nth-child(2)
-						text-align: left
-						padding-left: 100px
-		tbody
-			tr
-				transition: all .5s
-				cursor: pointer
-				&:nth-child(even)
-					background: #f5f5f5
-				td
-					text-align: center
-					padding: 20px 0
-					font-size: 14/16*1rem
-					&:first-child
-						font-weight: 500
-						font-size: 1rem
-					&:nth-child(2)
-						text-align: left
-						padding-left: 100px
-				&:hover
-					box-shadow: 0px 3px 20px 0px rgba($color: $black, $alpha: 0.186)
+		#table
+			height: 690px
+			overflow: hidden
+			transition: all .5s
+			box-shadow: 0px 3px 20px 0px rgba($color: $black, $alpha: 0.186)
+			&.active
+				height: 100%
+				overflow: visible
+
+		table
+			width: 100%
+			thead
+				tr
+					background: $main-3
+					th
+						padding: 12px 0
+						text-align: center
+						text-transform: uppercase
+						color: $white
+						&:first-child
+							padding: 0 20px
+						&:nth-child(2)
+							text-align: left
+							padding-left: 100px
+			tbody
+				tr
+					transition: all .5s
+					cursor: pointer
+					&:nth-child(even)
+						background: #f5f5f5
 					td
-						color: $main
-						a
-							text-decoration: underline
-		@media screen and ( max-width: 1024.98px )
-			display: none
+						text-align: center
+						padding: 20px 0
+						font-size: 14/16*1rem
+						&:first-child
+							font-weight: 500
+							font-size: 1rem
+						&:nth-child(2)
+							text-align: left
+							padding-left: 100px
+					&:hover
+						box-shadow: 0px 3px 20px 0px rgba($color: $black, $alpha: 0.186)
+						td
+							color: $main
+							a
+								text-decoration: underline
+			@media screen and ( max-width: 1024.98px )
+				display: none
 	.list-mobile
 		.item
 			margin-bottom: 30px
@@ -157,15 +183,17 @@
 		.apply,
 		.view
 			height: 50px
-			padding: 18px 38px
+			padding: 18px 23px
 			border-radius: 25px
 			display: flex
 			align-items: center
 			justify-content: center
 			color: $white
 			font-weight: 600
+			font-size: 14/16*1rem
 		.apply
 			background: $main
+
 		.view
 			background: $main-2
 			em
@@ -185,10 +213,16 @@
 					border-bottom: solid 1px #e1e1e1
 					td
 						padding: 15px 0
+						font-size: 14/16*1rem
+						strong
+							font-weight: 700
+							font-size: 14/16*1rem
+							line-height: 24px
 						span
 							color: $red
-					&:last-child
-						border: none
+							font-weight: 500
+							&:last-child
+								border: none
 	.recuirement-other
 		padding: 30px
 		background: $white

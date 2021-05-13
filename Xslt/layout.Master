@@ -1,5 +1,23 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/App_MasterPages/layout.Master.cs" Inherits="CanhCam.Web.layout" %>
+<!--
+/////////////////////////////////////////////////////////////////////////
 
+.$$$$$$\...$$$$$$\..$$\...$$\.$$\...$$\..$$$$$$\...$$$$$$\..$$\......$$\
+$$..__$$\.$$..__$$\.$$$\..$$.|$$.|..$$.|$$..__$$\.$$..__$$\.$$$\....$$$.|
+$$./..\__|$$./..$$.|$$$$\.$$.|$$.|..$$.|$$./..\__|$$./..$$.|$$$$\..$$$$.|
+$$.|......$$$$$$$$.|$$.$$\$$.|$$$$$$$$.|$$.|......$$$$$$$$.|$$\$$\$$.$$.|
+$$.|......$$..__$$.|$$.\$$$$.|$$..__$$.|$$.|......$$..__$$.|$$.\$$$..$$.|
+$$.|..$$\.$$.|..$$.|$$.|\$$$.|$$.|..$$.|$$.|..$$\.$$.|..$$.|$$.|\$../$$.|
+\$$$$$$..|$$.|..$$.|$$.|.\$$.|$$.|..$$.|\$$$$$$..|$$.|..$$.|$$.|.\_/.$$.|
+.\______/.\__|..\__|\__|..\__|\__|..\__|.\______/.\__|..\__|\__|.....\__|
+
+Canh Cam - the best Web Solutions Provider - http://www.canhcam.vn
+156 Nguyen Van Thu, District 1, Ho Chi Minh City, Viet Nam.
+Phone: (+84) 8 38238364 – Fax: (+84) 8 38238365 - Email: info@canhcam.vn
+Facebook: https://fb.com/canhcam.vn
+
+/////////////////////////////////////////////////////////////////////////
+-->
 <!DOCTYPE html>
 <html id="Html1" runat="server">
 
@@ -21,13 +39,6 @@
 	<portal:SkinFolderScript ID="SkinFolderScript3" runat="server" ScriptFileName="js/canhcam.js"
 		AddToCombinedScript="true" />
 	<portal:GoogleAnalyticsScript ID="GoogleAnalyticsScript1" runat="server" />
-
-	<!--*********************************************************************************************-->
-	<!-- Canh Cam - the best Web Solutions Provider - http://www.canhcam.vn                          -->
-	<!-- 156 Nguyen Van Thu, District 1, Ho Chi Minh City, Viet Nam.                                 -->
-	<!-- Phone: (+84) 8 38238364 – Fax: (+84) 8 38238365 - Email: info@canhcam.vn                    -->
-	<!-- Facebook: https://www.facebook.com/canhcam.vn                                               -->
-	<!--*********************************************************************************************-->
 </head>
 
 <body id="Body" runat="server" class="canhcam">

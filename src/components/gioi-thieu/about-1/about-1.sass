@@ -1,13 +1,17 @@
+#about-page
+	position: relative
+	height: 200%
+	.catelogry
+		background: $white
+		z-index: 999
+		visibility: visible
+		opacity: 1
+		&.scolled
+			position: sticky
+
 .about
 	position: relative
 	padding-top: 0
-	#catelogry
-		&.scolled
-			position: fixed
-			left: 0
-			width: 100%
-			z-index: 9
-			background: $white
 	.wrapper-list
 		margin-bottom: 40px
 		.item
@@ -43,6 +47,9 @@
 					font-size: 1rem
 					line-height: 26px
 					padding-top: 30px
+				ul
+					list-style: inside
+					padding-top: 10px
 				&::-webkit-scrollbar
 					width: 3px
 				&::-webkit-scrollbar-track
@@ -76,10 +83,6 @@
 				.desc
 					max-height: 185px
 	@media screen and ( max-width: 575.98px )
-		#tool-item
-			top: -76px
-		.catelogry
-			top: -94px
 		.wrapper-list
 			.item
 				width: 33.33%

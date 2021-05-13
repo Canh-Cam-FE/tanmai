@@ -20,51 +20,19 @@
         <xsl:if test="position() = 2">
             <section class="section recruit-list" setBackground="/Data/Sites/1/skins/default/img/bg/vitrituyendung.png">
                 <div class="container">
-                    <div class="wrapper-top d-flex align-center justify-between">
-                        <div class="section-title color-main">
-                            <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-                        </div>
-                        <div class="wrapper-filter d-flex align-center">
-                            <div class="text f-12 fw-500">Lọc theo tên Công ty/ Chi nhánh </div>
-                            <div class="dropdown">
-                                <div class="title f-14 d-flex align-center">
-                                    <xsl:if test="IsActive='true'">
-                                        <a>
-                                            <xsl:attribute name="href">
-                                                <xsl:value-of disable-output-escaping="yes" select="Url"></xsl:value-of>
-                                            </xsl:attribute>
-                                            <xsl:attribute name="title">
-                                                <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-                                            </xsl:attribute>
-                                            <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-                                        </a>
-                                    </xsl:if>
-                                    <em class="material-icons">expand_more</em>
-                                </div>
-                                <ul class="dropdown-menu">
+                    <div class="tab-container">
+                        <div class="wrapper-top d-flex align-center justify-between">
+                            <div class="section-title color-main">
+                                <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+                            </div>
+                            <div class="wrapper-filter d-flex align-center">
+                                <div class="text f-12 fw-500">Lọc theo tên Công ty/ Chi nhánh </div>
+                                <select id="select-box">
                                     <xsl:apply-templates select="Zone" mode="SubZone"></xsl:apply-templates>
-                                </ul>
+                                </select>
                             </div>
                         </div>
-                    </div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>stt </th>
-                                <th>vị trí tuyển dụng </th>
-                                <th>số lượng</th>
-                                <th>ngày đăng </th>
-                                <th>ngày hết hạn</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <xsl:apply-templates select="News" mode="DeskTop"></xsl:apply-templates>
-                        </tbody>
-                    </table>
-                    <div class="list-mobile">
-                        <div class="row">
-                            <xsl:apply-templates select="News" mode="Mobile"></xsl:apply-templates>
-                        </div>
+                        <xsl:apply-templates select="Zone" mode="SubContent"></xsl:apply-templates>
                     </div>
                 </div>
             </section>
@@ -92,23 +60,65 @@
         </div>
     </xsl:template>
     <xsl:template match="Zone" mode="SubZone">
-        <li>
-            <a>
-                <xsl:attribute name="href">
-                    <xsl:value-of disable-output-escaping="yes" select="Url"></xsl:value-of>
+        <option value="tab-1">
+            <xsl:attribute name="mytag">
+                <xsl:text disable-output-escaping="yes">tab-</xsl:text>
+                <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
+            </xsl:attribute>
+            <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+        </option>
+    </xsl:template>
+    <xsl:template match="Zone" mode="SubContent">
+        <div class="tab-content">
+            <xsl:if test="IsActive='true'">
+                <xsl:attribute name="class">
+                    <xsl:text>tab-content active</xsl:text>
                 </xsl:attribute>
-                <xsl:attribute name="title">
-                    <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+            </xsl:if>
+            <xsl:attribute name="id">
+                <xsl:text disable-output-escaping="yes">tab-</xsl:text>
+                <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
+            </xsl:attribute>
+            <xsl:if test="position() = 1">
+                <xsl:attribute name="class">
+                    <xsl:text>tab-content active</xsl:text>
                 </xsl:attribute>
-                <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+            </xsl:if>
+            <div id="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>stt </th>
+                            <th>vị trí tuyển dụng </th>
+                            <th>số lượng</th>
+                            <th>ngày đăng </th>
+                            <th>ngày hết hạn</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <xsl:apply-templates select="News" mode="DeskTop"></xsl:apply-templates>
+                    </tbody>
+                </table>
+            </div>
+            <div class="list-mobile">
+                <div class="row">
+                    <xsl:apply-templates select="News" mode="Mobile"></xsl:apply-templates>
+                </div>
+            </div>
+            <a class="load-more" href="javascript: ;">
+                <xsl:text disable-output-escaping="yes">Xem chi tiết</xsl:text>
+                <em class="material-icons">arrow_downward</em>
             </a>
-        </li>
+        </div>
     </xsl:template>
     <xsl:template match="News" mode="DeskTop">
         <tr>
             <td>
                 <xsl:if test="position() &lt; 10">
                     <xsl:text disable-output-escaping="yes">0</xsl:text>
+                    <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
+                </xsl:if>
+                <xsl:if test="position() &gt;9">
                     <xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
                 </xsl:if>
             </td>

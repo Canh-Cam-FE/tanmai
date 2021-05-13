@@ -3,12 +3,10 @@
     <xsl:output method="html" indent="yes"/>
     <xsl:template match="/ZoneList">
         <div id="tool-item"></div>
-        <div class="catelogry">
-            <div class="container">
-                <ul>
-                    <xsl:apply-templates select="Zone" mode="NavList"></xsl:apply-templates>
-                </ul>
-            </div>
+        <div class="container">
+            <ul id="catelogry">
+                <xsl:apply-templates select="Zone" mode="NavList"></xsl:apply-templates>
+            </ul>
         </div>
     </xsl:template>
     <xsl:template match="Zone" mode="NavList">

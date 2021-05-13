@@ -31,7 +31,7 @@
 				&:last-child
 					margin-bottom: 0
 .field-forestry
-	padding: 60px 0
+	padding: 70px 0
 	.content
 		height: 100%
 		display: flex
@@ -42,6 +42,11 @@
 			overflow-y: auto
 			padding-right: 40px
 			line-height: 26px
+			p
+				padding-bottom: 17px
+			ul
+				padding-bottom: 17px
+				list-style: inside
 			&::-webkit-scrollbar
 				width: 3px
 			&::-webkit-scrollbar-track
@@ -79,6 +84,16 @@
 		margin: 0 auto
 		margin-bottom: 40px
 		line-height: 26px
+		max-height: 156px
+		overflow-y: auto
+		&::-webkit-scrollbar
+			width: 3px
+		&::-webkit-scrollbar-track
+			background: #e1e1e1
+			width: 1px
+		&::-webkit-scrollbar-thumb
+			background: $main
+
 	.img
 		max-width: 1020px
 		margin: 0 auto
@@ -106,14 +121,25 @@
 		flex-direction: column
 		justify-content: center
 		height: 100%
+		padding-right: 45px
 		.desc
-			overflow: hidden
-			display: -webkit-box
-			text-overflow: ellipsis
-			-webkit-box-orient: vertical
-			-webkit-line-clamp: 11
+			overflow-y: auto
+			max-height: 285px
+			padding-right: 10px
+			&::-webkit-scrollbar
+				width: 3px
+			&::-webkit-scrollbar-track
+				background: #e1e1e1
+				width: 1px
+			&::-webkit-scrollbar-thumb
+				background: $main
+			p
+				padding-bottom: 17px
 	.img
 		+img-ratio(480/704)
+	@media screen and ( max-width: 991.98px )
+		.content
+			padding: 0
 	@media screen and ( max-width: 767.98px )
 		padding: 30px 0
 		.img
@@ -137,6 +163,8 @@
 			overflow-y: auto
 			line-height: 26px
 			padding-right: 39px
+			p
+				padding-bottom: 17px
 			&::-webkit-scrollbar
 				width: 3px
 			&::-webkit-scrollbar-track

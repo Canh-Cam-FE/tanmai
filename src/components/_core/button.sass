@@ -62,11 +62,11 @@
 			+ span
 				display: none
 	&-view-more
-		padding-left: 65px
-		padding-right: 24px
 		display: flex
 		align-items: center
-		width: 200px
+		padding: 0 50px
+		padding-left: 60px
+		width: max-content
 		height: 50px
 		border-radius: 25px
 		color: $main
@@ -81,7 +81,7 @@
 			position: absolute
 			content: "\EA6C"
 			top: 0
-			left: -1px
+			right: calc( 100% - 50px )
 			display: flex
 			align-items: center
 			justify-content: center
@@ -91,15 +91,16 @@
 			font-size: 22px
 			font-weight: 400
 			color: $white
-			background-color: $main
+			background: $main
 			border-radius: 50%
 			transition: all .5s ease-in-out
 		&:hover
 			background-color: $main
 			color: $white
 			&::after
-				background-color: $white
-				color: $main
+				color: $white
+				right: 0
+				background: transparent
 	&-view-more-2
 		display: flex
 		align-items: center

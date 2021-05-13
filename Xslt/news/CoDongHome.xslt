@@ -27,7 +27,7 @@
             </div>
             <div class="item-body d-flex">
                 <div class="desc lcl lcl-2 f-14 fw-500 line-20">
-                    <a>
+                    <a target="_blank">
                         <xsl:attribute name="href">
                             <xsl:value-of disable-output-escaping="yes" select="FileUrl"></xsl:value-of>
                         </xsl:attribute>
@@ -45,6 +45,8 @@
                     <xsl:attribute name="title">
                         <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
                     </xsl:attribute>
+                    <xsl:attribute name="download">
+					</xsl:attribute>
                     <em class="material-icons">file_download</em>
                 </a>
             </div>
