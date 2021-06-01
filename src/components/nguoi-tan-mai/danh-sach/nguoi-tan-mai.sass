@@ -21,6 +21,7 @@
 			.content
 				display: flex
 				align-items: flex-start
+
 				.icon
 					margin-top: 7px
 					display: flex
@@ -30,6 +31,16 @@
 					height: 55px
 					margin-right: 22px
 					background-color: $main
+					img
+						display: none
+					&.video
+						img
+							&:first-child
+								display: block
+					&.picture
+						img
+							&:last-child
+								display: block
 
 	.category-section
 		padding: 50px 0

@@ -3,8 +3,10 @@
 		padding-right: 50px
 		margin-bottom: 30px
 	.wrapper-list
-		flex-direction: row
-		flex-wrap: wrap
+		@media screen and ( max-width: 767.98px )
+			flex-direction: row
+			flex-wrap: wrap
+			justify-content: center
 		.col-item
 			display: flex
 			flex-direction: column
@@ -16,6 +18,10 @@
 				margin-bottom: 25px
 			.content
 				padding: 0 20px
+				white-space: nowrap
+				transition: .3s all ease-in-out
+				&.active
+					color: $main
 	@media screen and ( max-width: 1199.98px )
 		.desc
 			padding: 0
