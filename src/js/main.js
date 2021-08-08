@@ -60,6 +60,10 @@ const swiperInit = () => {
 			nextEl: ".wrapper-slide .swiper-button-next",
 			prevEl: ".wrapper-slide .swiper-button-prev",
 		},
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
@@ -686,6 +690,17 @@ const changeImageOnHover = () => {
 	});
 };
 
+function NguoiTanMailoop() {
+	var loop = $(".category-section .row .col-lg-3.col-md-6.col-sm-6");
+	if ($(".category-section").length >= 1) {
+		loop.each(function (e) {
+			$(this)
+				.find(".img a")
+				.attr("data-fancybox", "idLoop-" + e);
+		});
+	}
+}
+
 /*==================== LOAD FUNCTION ====================*/
 $(document).ready(function () {
 	scrollTop();
@@ -703,6 +718,7 @@ $(document).ready(function () {
 	crollToDiv();
 	showHideTabel();
 	changeImageOnHover();
+	NguoiTanMailoop();
 	$(".image-map-wrapper img[usemap]").maphilight({
 		fillColor: "3b5a56",
 		fillOpacity: 0,
