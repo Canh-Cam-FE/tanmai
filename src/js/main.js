@@ -40,7 +40,7 @@ const swiperInit = () => {
 		speed: 2000,
 		effect: "fade",
 		autoplay: {
-			delay: 3000,
+			delay: 5000,
 			disableOnInteraction: false,
 		},
 		fadeEffect: {
@@ -518,10 +518,31 @@ const slideTab = () => {
 };
 /*======================CHANGEPLACEHOLDER=================================*/
 const changePlaceholder = () => {
-	$(".subscribe .subscribefrm")
-		.find("input")
-		.attr("placeholder", "Địa chỉ email...");
+	if ($("html").attr("lang") === "en") {
+		$(".subscribe .subscribefrm")
+			.find("input.subscribeemail")
+			.attr("placeholder", "Email...");
+		$(".subscribe .subscribefrm")
+			.find("button.subscribebutton")
+			.text("Send");
+
+		$(".contact-page .frm-btn").addClass("en");
+	} else {
+		$(".subscribe .subscribefrm")
+			.find("input.subscribeemail")
+			.attr("placeholder", "Địa chỉ email...");
+		$(".subscribe .subscribefrm")
+			.find("button.subscribebutton")
+			.text("Gửi");
+	}
 };
+// Gửi thông tin trang contact
+$(".contact-page .frm-btn input[type='submit']").on("click", function () {
+	setTimeout(() => {
+		changePlaceholder();
+	}, 100);
+});
+
 /*======================PHAN TRANG=================================*/
 const phantrang = () => {
 	$(".modulepager")

@@ -134,19 +134,24 @@
 			.wrap-content
 				padding: 40px 30px
 				background: $white
+				.row
+					@media (min-width: 1024px)
+						align-items: flex-end
 				.content
 					.title
 						padding-bottom: 20px
 					.desc
 						p
-							padding-bottom: 20px
 							line-height: 26px
+						* + *
+							margin-top: 20px
 				.img
 					+img-ratio(401/558)
+					height: 100%
 				.full-content
 					padding-top: 35px
-					p
-						padding-bottom: 10px
+					* + *
+						margin-top: 10px
 					ul
 						list-style-type: disc
 						padding-left: 20px

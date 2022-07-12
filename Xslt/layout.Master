@@ -132,8 +132,9 @@ Facebook: https://fb.com/canhcam.vn
 					<div class="coppy-right d-flex align-center">
 						<portal:modulewrapper id="mdl146" runat="server" configuremoduleid="146" />
 						<portal:modulewrapper id="mdl147" runat="server" configuremoduleid="147" />
-						<div class="back-to-top text-uppercase d-flex align-center color-white f-12 ml-auto">Đầu
-							trang<em class="material-icons">expand_less</em></div>
+						<div class="back-to-top text-uppercase d-flex align-center color-white f-12 ml-auto">
+							<portal:modulewrapper id="mdl208" runat="server" configuremoduleid="208" />
+						</div>
 					</div>
 				</div>
 			</footer>
