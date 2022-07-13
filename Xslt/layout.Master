@@ -99,8 +99,10 @@ Facebook: https://fb.com/canhcam.vn
 					<div class="row">
 						<div class="col-lg-3 col-md-6 col-sm-6">
 							<div class="footer-card">
-								<div class="title f-20 fw-700 color-white text-uppercase">công ty cổ phần tập đoàn tân
-									mai</div>
+								<div class="title f-20 fw-700 color-white text-uppercase">
+									<portal:modulewrapper id="mdl209" runat="server" configuremoduleid="209" />
+
+								</div>
 								<div class="wrapper-content">
 									<portal:modulewrapper id="mdl144" runat="server" configuremoduleid="144" />
 								</div>
@@ -108,7 +110,9 @@ Facebook: https://fb.com/canhcam.vn
 						</div>
 						<div class="col-lg-3 col-md-6 col-sm-6 col-6">
 							<div class="footer-card">
-								<div class="title f-20 fw-700 color-white text-uppercase">giới thiệu</div>
+								<div class="title f-20 fw-700 color-white text-uppercase">
+									<portal:modulewrapper id="mdl210" runat="server" configuremoduleid="210" />
+								</div>
 								<div class="wrapper-content">
 									<portal:modulewrapper id="mdl142" runat="server" configuremoduleid="142" />
 								</div>
@@ -116,7 +120,9 @@ Facebook: https://fb.com/canhcam.vn
 						</div>
 						<div class="col-lg-3 col-md-6 col-sm-6 col-6">
 							<div class="footer-card">
-								<div class="title f-20 fw-700 color-white text-uppercase">liên kết nhanh</div>
+								<div class="title f-20 fw-700 color-white text-uppercase">
+									<portal:modulewrapper id="mdl211" runat="server" configuremoduleid="211" />
+								</div>
 								<div class="wrapper-content">
 									<portal:modulewrapper id="mdl143" runat="server" configuremoduleid="143" />
 								</div>
@@ -124,7 +130,9 @@ Facebook: https://fb.com/canhcam.vn
 						</div>
 						<div class="col-lg-3 col-md-6 col-sm-6">
 							<div class="footer-card">
-								<div class="title f-20 fw-700 color-white text-uppercase">đăng ký nhận bản tin</div>
+								<div class="title f-20 fw-700 color-white text-uppercase">
+									<portal:modulewrapper id="mdl212" runat="server" configuremoduleid="212" />
+								</div>
 								<portal:modulewrapper id="mdl145" runat="server" configuremoduleid="145" />
 							</div>
 						</div>
