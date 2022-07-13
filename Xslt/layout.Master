@@ -93,6 +93,10 @@ Facebook: https://fb.com/canhcam.vn
 					<asp:ContentPlaceHolder ID="rightContent" runat="server">
 					</asp:ContentPlaceHolder>
 				</asp:Panel>
+				<asp:Panel ID="divAlt2" runat="server" CssClass="altcontent2">
+					<asp:ContentPlaceHolder ID="altContent2" runat="server">
+					</asp:ContentPlaceHolder>
+				</asp:Panel>
 			</main>
 			<footer>
 				<div class="container">

@@ -20,7 +20,7 @@
 							<xsl:attribute name="title">
 								<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 							</xsl:attribute>
-							<xsl:text disable-output-escaping="yes">Xem tất cả</xsl:text>
+							<xsl:value-of disable-output-escaping="yes" select="../ShowAllTxt"></xsl:value-of>
 						</a>
 						<em class="material-icons">navigate_next</em>
 					</div>
@@ -44,7 +44,7 @@
 							<xsl:attribute name="title">
 								<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 							</xsl:attribute>
-							<xsl:text disable-output-escaping="yes">Xem tất cả</xsl:text>
+							<xsl:value-of disable-output-escaping="yes" select="../ShowAllTxt"></xsl:value-of>
 						</a>
 						<em class="material-icons">navigate_next</em>
 					</div>
@@ -68,7 +68,7 @@
 							<xsl:attribute name="title">
 								<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 							</xsl:attribute>
-							<xsl:text disable-output-escaping="yes">Xem tất cả</xsl:text>
+							<xsl:value-of disable-output-escaping="yes" select="../ShowAllTxt"></xsl:value-of>
 						</a>
 						<em class="material-icons">navigate_next</em>
 					</div>
