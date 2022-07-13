@@ -1029,4 +1029,10 @@
     <data name="TimeAgoYearsFormat" xml:space="preserve">
         <value>{0} years ago</value>
     </data>
+	 <data name="ShowmoreTxt" xml:space="preserve">
+        <value>Show more</value>
+    </data>
+    <data name="ShowAllTxt" xml:space="preserve">
+        <value>Show all</value>
+    </data>
 </root>

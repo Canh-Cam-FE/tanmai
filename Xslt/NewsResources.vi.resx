@@ -1026,4 +1026,10 @@
     <data name="TimeAgoYearsFormat" xml:space="preserve">
         <value>{0} năm trước</value>
     </data>
+	<data name="ShowmoreTxt" xml:space="preserve">
+        <value>Tìm hiểu thêm</value>
+    </data>
+    <data name="ShowAllTxt" xml:space="preserve">
+        <value>Xem tất cả</value>
+    </data>
 </root>
