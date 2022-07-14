@@ -1032,4 +1032,7 @@
     <data name="ShowAllTxt" xml:space="preserve">
         <value>Xem tất cả</value>
     </data>
+	<data name="ShowDetailTxt" xml:space="preserve">
+        <value>Xem chi tiết</value>
+    </data>
 </root>
