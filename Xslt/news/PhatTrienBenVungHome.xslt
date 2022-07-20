@@ -15,13 +15,14 @@
 					<xsl:apply-templates select="News"></xsl:apply-templates>
 				</div>
 			</div>
+
 		</section>
 	</xsl:template>
 	<xsl:template match="News">
 		<div class="col-lg-6">
 			<div class="wrapper-content">
 				<div class="section-title color-main">
-					<xsl:value-of disable-output-escaping="yes" select="ZoneTitle"></xsl:value-of>
+					<xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of>
 					<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 				</div>
 				<div class="desc f-16">
@@ -29,7 +30,7 @@
 				</div>
 				<a class="btn btn-view-more" href="">
 					<xsl:attribute name="href">
-						<xsl:text disable-output-escaping="yes">/phat-trien-ben-vung</xsl:text>
+						<xsl:value-of disable-output-escaping="yes" select="Url"></xsl:value-of>
 					</xsl:attribute>
 					<xsl:attribute name="title">
 						<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
