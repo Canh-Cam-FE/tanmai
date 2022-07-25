@@ -1035,4 +1035,34 @@
 	<data name="ShowDetailTxt" xml:space="preserve">
         <value>Xem chi tiết</value>
     </data>
+	<data name="FilterByCompanyTxt" xml:space="preserve">
+		<value>Lọc theo tên Công ty/ Chi nhánh</value>
+	</data>
+	<data name="ApplyTxt" xml:space="preserve">
+		<value>Ứng tuyển</value>
+	</data>
+	<data name="DownloadFormTxt" xml:space="preserve">
+		<value>Tải mẫu đơn xin việc</value>
+	</data>
+	<data name="IdTxt" xml:space="preserve">
+		<value>STT</value>
+	</data>
+	<data name="JobPositionTxt" xml:space="preserve">
+		<value>Vị trí tuyển dụng</value>
+	</data>
+	<data name="QuantityTxt" xml:space="preserve">
+		<value>Số lượng</value>
+	</data>
+	<data name="FromTxt" xml:space="preserve">
+		<value>Ngày đăng</value>
+	</data>
+	<data name="ToTxt" xml:space="preserve">
+		<value>Ngày hết hạn</value>
+	</data>
+	<data name="OrTxt" xml:space="preserve">
+		<value>Hoặc</value>
+	</data>
+	<data name="OtherPositionTxt" xml:space="preserve">
+		<value>Vị trí khác</value>
+	</data>
 </root>

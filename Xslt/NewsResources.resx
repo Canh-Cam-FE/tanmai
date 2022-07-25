@@ -1029,7 +1029,7 @@
     <data name="TimeAgoYearsFormat" xml:space="preserve">
         <value>{0} years ago</value>
     </data>
-	<data name="ShowmoreTxt" xml:space="preserve">
+	 <data name="ShowmoreTxt" xml:space="preserve">
         <value>Show more</value>
     </data>
     <data name="ShowAllTxt" xml:space="preserve">
@@ -1038,4 +1038,34 @@
     <data name="ShowDetailTxt" xml:space="preserve">
         <value>Show detail</value>
     </data>
+	<data name="FilterByCompanyTxt" xml:space="preserve">
+		<value>Filter by company/branch</value>
+	</data>
+	<data name="ApplyTxt" xml:space="preserve">
+		<value>Apply</value>
+	</data>
+	<data name="DownloadFormTxt" xml:space="preserve">
+		<value>Download JD</value>
+	</data>
+	<data name="IdTxt" xml:space="preserve">
+		<value>ID</value>
+	</data>
+	<data name="JobPositionTxt" xml:space="preserve">
+		<value>Job position</value>
+	</data>
+	<data name="QuantityTxt" xml:space="preserve">
+		<value>Quantity</value>
+	</data>
+	<data name="FromTxt" xml:space="preserve">
+		<value>From</value>
+	</data>
+	<data name="ToTxt" xml:space="preserve">
+		<value>To</value>
+	</data>
+	<data name="OrTxt" xml:space="preserve">
+		<value>Or</value>
+	</data>
+	<data name="OtherPositionTxt" xml:space="preserve">
+		<value>Other Position</value>
+	</data>
 </root>
