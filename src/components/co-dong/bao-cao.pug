@@ -8,7 +8,7 @@ section.section.report-page
 					a.f-14.color-main(href='') Báo cáo tài chính & quản trị
 					em.material-icons expand_more
 				ul.dropdown-menu 
-					li.active
+					li
 						a(href="") Báo cáo tài chính 
 					li 
 						a(href="") Báo cáo thường niên
@@ -21,7 +21,7 @@ section.section.report-page
 			.swiper-container.tabs
 				.swiper-wrapper
 					.swiper-slide
-						.swiper-inner.active(data-href="panel-1")
+						.swiper-inner(data-href="panel-1")
 							.desc.f-24.fw-700.color-gray-2 2013
 							.dot 
 					.swiper-slide
@@ -54,7 +54,7 @@ section.section.report-page
 							.dot 
 				.swiper-button-next
 				.swiper-button-prev
-			#panel-1.panel.active
+			#panel-1.panel
 				.wrapper-column
 					.swiper-container.column
 						.swiper-wrapper
@@ -74,20 +74,39 @@ section.section.report-page
 													|Tải về
 					.swiper-pagination
 			#panel-2.panel
-				.row
-					-for(i=1; i<10; i++)
-						.col-lg-4.col-md-6.col-sm-6
-							.item.d-flex
-								.img 
-									a(href="") 
-										img(src="./img/icon/pdf.png" alt="")
-								.content 
-									time.f-12 30.09.2018
-									.title.f-14
-										a(href="") Báo Cáo Tài Chính Hợp Nhất Cty CP TĐ Tân Mai đến ngày 30/09/2018
-									a(href="")
-										em.material-icons download
-										|Tải về
+				.wrapper-column
+					.swiper-container.column
+						.swiper-wrapper
+							-for(i=1; i<18; i++)
+								.swiper-slide
+									.swiper-inner
+										.item.d-flex
+											.img 
+												a(href="") 
+													img(src="./img/icon/pdf.png" alt="")
+											.content 
+												time.f-12 30.09.2018
+												.title.f-14
+													a(href="") Báo Cáo Tài Chính Hợp Nhất Cty CP TĐ Tân Mai đến ngày 30/09/2018
+												a(href="")
+													em.material-icons download
+													|Tải về
+					.swiper-pagination
+			//- #panel-2.panel
+			//- 	.row
+			//- 		-for(i=1; i<10; i++)
+			//- 			.col-lg-4.col-md-6.col-sm-6
+			//- 				.item.d-flex
+			//- 					.img 
+			//- 						a(href="") 
+			//- 							img(src="./img/icon/pdf.png" alt="")
+			//- 					.content 
+			//- 						time.f-12 30.09.2018
+			//- 						.title.f-14
+			//- 							a(href="") Báo Cáo Tài Chính Hợp Nhất Cty CP TĐ Tân Mai đến ngày 30/09/2018
+			//- 						a(href="")
+			//- 							em.material-icons download
+			//- 							|Tải về
 			#panel-3.panel
 				.row
 					-for(i=1; i<10; i++)

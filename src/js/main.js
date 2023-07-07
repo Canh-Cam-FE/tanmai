@@ -262,9 +262,10 @@ const swiperInit = () => {
 			},
 		},
 	});
-	let sildeTabs = new Swiper(".silde-wrapper .swiper-container", {
+	const sildeTabs = new Swiper(".silde-wrapper .swiper-container.tabs", {
 		speed: 300,
-		loop: false,
+		// loop: false,
+		initialSlide: 5,
 		observer: true,
 		observeParents: true,
 		navigation: {
@@ -293,7 +294,13 @@ const swiperInit = () => {
 				slidesPerView: 8,
 			},
 		},
+		on: {
+			afterInit: function () {
+				console.log("init");
+			},
+		},
 	});
+
 	let newsOther = new Swiper(".slide-other-news .swiper-container", {
 		speed: 300,
 		loop: true,
@@ -485,21 +492,21 @@ const homePopup = () => {
 
 /*======================SLIDE TABS=================================*/
 const slideTab = () => {
+	$(".tabs .swiper-slide").last().children().addClass("active");
+	$(".report-page .panel").last().addClass("active");
+	$(".report-page .panel").last().show();
 	$(".tabs")
 		.find(".swiper-inner")
 		.on("click", function () {
 			let $panel = $(this).closest(".tab-panel");
-			$panel.find(".swiper-inner.active").removeClass("active");
+			$panel.find(".swiper-inner").removeClass("active");
 			$(this).addClass("active");
 			let panelToShow = $(this).attr("data-href");
-			$panel.find(".panel.active").fadeOut(300, showNextPanel);
-
-			function showNextPanel() {
-				$(this).removeClass("active");
-				$("#" + panelToShow).fadeIn(300, function () {
-					$(this).addClass("active").fadeIn(300);
-				});
-			}
+			$panel.find(`.panel`).hide();
+			$panel.find(`.panel`).removeClass("active");
+			$panel.find(`.panel[id="${panelToShow}"]`).fadeIn(300, function () {
+				$panel.find(`.panel[id="${panelToShow}"]`).addClass("active");
+			});
 		});
 	$(".recruit-list")
 		.find("#select-box")
