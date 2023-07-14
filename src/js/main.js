@@ -394,7 +394,10 @@ const checkLayoutBanner = () => {
 	if (path.indexOf("#") != -1) {
 		$("html, body").animate(
 			{
-				scrollTop: $(Ketqua).offset().top - heightHeader + 15,
+				scrollTop:
+					$(Ketqua).offset().top -
+					heightHeader -
+					$(".catelogry").outerHeight(),
 			},
 			1000
 		);
@@ -591,17 +594,30 @@ const crollToDiv = () => {
 					$("header").outerHeight(),
 			});
 
-			window.addEventListener("scroll", function () {
-				let bannerheight = $("#pagebanner").outerHeight();
-				let headerHeight = $("header").outerHeight();
+			// window.addEventListener("scroll", function () {
+			// 	let bannerheight = $("#pagebanner").outerHeight();
+			// 	let headerHeight = $("header").outerHeight();
 
-				if (window.pageYOffset > bannerheight) {
-					$(".catelogry").addClass("scolled");
-					$(".catelogry").css("top", headerHeight);
-				} else {
-					$(".catelogry").removeClass("scolled");
-					$(".catelogry").css("top", 0);
-				}
+			// 	if (window.pageYOffset > bannerheight) {
+			// 		$(".catelogry").addClass("scolled");
+			// 		$(".catelogry").css("top", headerHeight);
+			// 	} else {
+			// 		$(".catelogry").removeClass("scolled");
+			// 		$(".catelogry").css("top", 0);
+			// 	}
+			// });
+		});
+		$(" .footer-card li a").on("click", function (event) {
+			event.preventDefault();
+			var $section = $(this).attr("href");
+			$section = $section.split("#");
+			$section = $section[$section.length - 1];
+			var hashTag = "#" + $section;
+			$("html, body").animate({
+				scrollTop:
+					$(hashTag).offset().top -
+					$(".catelogry").outerHeight() -
+					$("header").outerHeight(),
 			});
 		});
 	}
@@ -621,16 +637,16 @@ const crollToDiv = () => {
 			}
 		});
 		$(window).scroll(function () {
-			var scrollDistance = $(window).scrollTop();
+			var scrollDistance = $(this).scrollTop();
 			$("#about-page section").each(function (i) {
 				if (
-					$(this).position().top -
+					$(this).offset().top -
 						$(".catelogry").outerHeight() -
 						$("header").outerHeight() -
 						1 <=
 					scrollDistance
 				) {
-					$(".catelogry #catelogry li.active").removeClass("active");
+					$(".catelogry #catelogry li").removeClass("active");
 					$(".catelogry #catelogry li").eq(i).addClass("active");
 				}
 			});
